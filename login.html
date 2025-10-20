@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🌾 Connexion - Plateforme Agricole</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #2e7d32;
+      --primary-light: #66bb6a;
+      --primary-dark: #1b5e20;
+      --accent: #f9a825;
+      --bg-light: #f1f8e9;
+      --white: #ffffff;
+      --gray: #666;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, var(--bg-light) 0%, #dcedc8 100%);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .container {
+      display: flex;
+      max-width: 1050px;
+      width: 100%;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+      background: var(--white);
+      animation: fadeIn 1s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .illustration {
+      flex: 1;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      color: var(--white);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 40px;
+    }
+
+    .illustration h2 {
+      font-size: 30px;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    .illustration p {
+      font-size: 16px;
+      opacity: 0.9;
+      line-height: 1.6;
+      margin-bottom: 25px;
+    }
+
+    .illustration img {
+      width: 80%;
+      max-width: 280px;
+      border-radius: 10px;
+      margin-top: 15px;
+      box-shadow: 0 8px 25px rgba(255,255,255,0.2);
+    }
+
+    .form-container {
+      flex: 1.2;
+      padding: 50px 40px;
+    }
+
+    .form-header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .form-header h1 {
+      color: var(--primary-dark);
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    .form-header p {
+      color: var(--gray);
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: #333;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px 15px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      font-size: 15px;
+      transition: 0.3s;
+    }
+
+    input:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(46,125,50,0.2);
+      outline: none;
+    }
+
+    .btn {
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 14px 20px;
+      font-size: 16px;
+      font-weight: 600;
+      border-radius: 10px;
+      width: 100%;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin-top: 10px;
+    }
+
+    .btn:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+    }
+
+    .login-link {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .login-link a {
+      color: var(--primary);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .login-link a:hover {
+      text-decoration: underline;
+    }
+
+    .demo-accounts {
+      margin-top: 30px;
+      padding: 15px;
+      background-color: var(--bg-light);
+      border-left: 5px solid var(--primary);
+      border-radius: 10px;
+    }
+
+    .demo-accounts h3 {
+      color: var(--primary-dark);
+      margin-bottom: 10px;
+    }
+
+    .demo-accounts p {
+      color: #444;
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+
+    .error-message {
+      background-color: rgba(249, 168, 37, 0.1);
+      color: #c62828;
+      border-left: 4px solid #c62828;
+      padding: 10px;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      display: none;
+      text-align: center;
+      font-weight: 500;
+    }
+
+    body {
+  background: linear-gradient(135deg, var(--bg-light) 0%, #dcedc8 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  overflow-y: auto; /* ✅ Permet le défilement sur mobile */
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap; /* ✅ Pour éviter les débordements */
+  max-width: 1050px;
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+  background: var(--white);
+  animation: fadeIn 1s ease;
+}
+
+/* ✅ Amélioration pour mobile */
+@media (max-width: 850px) {
+  .container {
+    flex-direction: column;
+    margin: 20px 0;
+  }
+
+  .illustration {
+    padding: 20px 15px;
+  }
+
+  .illustration h2 {
+    font-size: 22px;
+  }
+
+  .illustration img {
+    width: 90%;
+    max-width: 200px; /* ✅ réduit pour petits écrans */
+  }
+
+  .form-container {
+    padding: 25px 20px; /* ✅ réduit le padding */
+  }
+}
+
+/* ✅ Très petits écrans (téléphones ≤ 400px) */
+@media (max-width: 400px) {
+  body {
+    padding: 10px;
+  }
+
+  .illustration h2 {
+    font-size: 20px;
+  }
+
+  .illustration p {
+    font-size: 14px;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 12px;
+  }
+}
+.floating-home-btn::after {
+  content: "Accueil";
+  position: absolute;
+  right: 65px;
+  background: #4caf50;
+  color: #fff;
+  padding: 5px 12px;
+  border-radius: 20px;
+  opacity: 0;
+  transform: translateX(10px);
+  transition: all 0.3s ease;
+  pointer-events: none;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.floating-home-btn:hover::after {
+  opacity: 1;
+  transform: translateX(0);
+}
+/* === Bouton flottant Accueil (à droite) === */
+.floating-home-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px; /* ✅ بدل left:20px par right:20px */
+  width: 55px;
+  height: 55px;
+  background: #4caf50;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease;
+  z-index: 9999;
+  cursor: pointer;
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.floating-home-btn:hover {
+  background: #2e7d32;
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(46, 125, 50, 0.4);
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body>
+
+  <div class="container">
+    <div class="illustration">
+      <h2>Bienvenue sur la Plateforme Agricole</h2>
+      <p>Connectez-vous pour accéder à votre tableau de bord personnalisé 🌱</p>
+      <img src="agri-report.png" alt="Agriculture">
+
+    </div>
+
+    <div class="form-container">
+      <div class="form-header">
+        <h1>Connexion</h1>
+        <p>Veuillez entrer vos identifiants</p>
+      </div>
+
+      <div class="error-message" id="error-message"></div>
+
+      <form id="login-form">
+        <div class="form-group">
+          <label for="email">Adresse E-mail</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Mot de Passe</label>
+          <input type="password" id="password" name="password" required>
+        </div>
+
+        <button type="submit" class="btn">Se Connecter</button>
+
+        <div class="login-link">
+          <p>Pas encore inscrit ? <a href="register.html">Créer un compte</a></p>
+        </div>
+      </form>
+
+      <div class="demo-accounts">
+        <h3>💡 Comptes de démonstration :</h3>
+        <p><strong>Délégué technique :</strong> tech@agricole.com / password123</p>
+        <p><strong>Chef de région :</strong> region@agricole.com / password123</p>
+        <p><strong>Délégué commercial :</strong> commercial@agricole.com / password123</p>
+      </div>
+    </div>
+  </div>
+<!-- 🔘 Bouton flottant Accueil à droite -->
+<a href="index.html" class="floating-home-btn" title="Retour à l'accueil">
+  <i class="fas fa-home"></i>
+</a>
+
+  <script>
+    document.getElementById('login-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+      const errorMsg = document.getElementById('error-message');
+      const btn = document.querySelector('.btn');
+
+      const users = {
+        'tech@agricole.com': { password: 'password123', type: 'technique' },
+        'region@agricole.com': { password: 'password123', type: 'region' },
+        'commercial@agricole.com': { password: 'password123', type: 'commercial' }
+      };
+
+      errorMsg.style.display = 'none';
+
+      if (users[email] && users[email].password === password) {
+        btn.textContent = 'Connexion...';
+        btn.disabled = true;
+        setTimeout(() => {
+          switch (users[email].type) {
+            case 'technique': window.location.href = 'dashboard/technique/dashboard_technique.html'; break;
+            case 'region': window.location.href = 'dashboard/region/dashboard_region.html'; break;
+            case 'commercial': window.location.href = '404.html'; break;
+          }
+        }, 1200);
+      } else {
+        errorMsg.textContent = '❌ Adresse e-mail ou mot de passe incorrect';
+        errorMsg.style.display = 'block';
+      }
+    });
+  </script>
+</body>
+</html>
