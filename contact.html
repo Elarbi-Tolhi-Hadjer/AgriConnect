@@ -3483,6 +3483,271 @@
             }, 300);
         }, 5000);
     }
+    // === توليد بيانات تجريبية تلقائياً ===
+function generateSampleData() {
+    console.log('🎯 بدء توليد البيانات التجريبية...');
+    
+    // === 🌍 تقسيم الولايات الجزائرية حسب المناطق ===
+    const wilayasByRegion = {
+        nord: [
+            "Alger", "Blida", "Tizi Ouzou", "Béjaïa", "Boumerdès", "Tipaza", "Bouira", "Medea", "Aïn Defla", "Chlef",
+            "Tissemsilt", "Relizane", "Mostaganem", "Oran", "Mascara", "Saïda", "Sidi Bel Abbès", "Tlemcen", "Aïn Témouchent"
+        ],
+        sud: [
+            "Adrar", "Béchar", "Tindouf", "Bordj Badji Mokhtar", "Timimoun", "Ouled Djellal", "Béni Abbès", "In Salah", "In Guezzam",
+            "Touggourt", "Djanet", "El M'Ghair", "El Menia", "Ghardaïa", "El Oued", "Ouargla", "Illizi", "Tamanrasset"
+        ],
+        est: [
+            "Annaba", "Skikda", "El Tarf", "Souk Ahras", "Guelma", "Constantine", "Mila", "Jijel", "Oum El Bouaghi", "Batna",
+            "Khenchela", "Tébessa", "Sétif", "Bordj Bou Arréridj"
+        ],
+        ouest: [
+            "Tlemcen", "Sidi Bel Abbès", "Mascara", "Mostaganem", "Oran", "Aïn Témouchent", "Relizane", "Saïda", "Tiaret", "Tissemsilt"
+        ]
+    };
+
+    const allWilayas = [...new Set([...wilayasByRegion.nord, ...wilayasByRegion.sud, ...wilayasByRegion.est, ...wilayasByRegion.ouest])];
+
+    // === 👤 أسماء جزائرية واقعية ===
+    const nomsEst = ["Haddad", "Bouzid", "Lakhdari", "Mokrani", "Zerrouki", "Benali", "Djelloul", "Ouali", "Bouhired", "Belkacem"];
+    const prenomsEst = ["Haroun", "Ahmed", "Fatima", "Karim", "Yasmine", "Mohamed", "Samira", "Nabil", "Leila", "Souad"];
+
+    const nomsOuest = ["Benkhelifa", "Cherif", "Ait Ali", "Hamidi", "Boudjema", "Kaci", "Bendjelloul", "Sahraoui", "Guermat", "Ziani"];
+    const prenomsOuest = ["Yacine", "Nora", "Farid", "Imene", "Reda", "Warda", "Sofiane", "Amel", "Tarek", "Djamila"];
+
+    const nomsNord = ["Boudjemaa", "Brahimi", "Ghalem", "Mansouri", "Bouziane", "Lounici", "Taleb", "Bouafia", "Merzoug", "Bouhafs"];
+    const prenomsNord = ["Amine", "Sarah", "Ilyes", "Chahrazed", "Walid", "Nadia", "Anis", "Feriel", "Zakaria", "Hind"];
+
+    const nomsSud = ["Ould Ali", "Benamar", "Sidi", "Abdelkader", "Boukari", "Touati", "Zerroug", "Bendjedid", "Larbi", "Bouazza"];
+    const prenomsSud = ["Khaled", "Zahra", "Mehdi", "Aicha", "Brahim", "Fatma", "Abdel", "Khadija", "Mustapha", "Zineb"];
+
+    // === 🌾 أنواع الزراعة ===
+    const cultures = ["Céréales", "Légumes", "Arboriculture", "Élevage", "Serres maraîchères", "Oléiculture", "Viticulture"];
+
+    // === 📸 صور تجريبية (بيانات base64 صغيرة) ===
+    const photoByProblem = {
+        "Mildiou": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjE1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZGRlOGNjIi8+PGNpcmNsZSBjeD0iMTAwIiBjeT0iNzUiIHI9IjMwIiBmaWxsPSIjN2ViODcyIi8+PC9zdmc+",
+        "Rouille": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjE1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZmZkN2FhIi8+PHJlY3QgeD0iNTAiIHk9IjUwIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjUwIiBmaWxsPSIjYzY3OTM1Ii8+PC9zdmc+",
+        "Sécheresse": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjE1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZDZjMzkzIi8+PHBhdGggZD0iTTQwLDgwIEwxNjAsODAgTDE2MCwxMDAgTDQwLDEwMCBaIiBmaWxsPSIjODc1NDEyIi8+PC9zdmc+",
+        "Insectes": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjE1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZTlmNWQxIi8+PGNpcmNsZSBjeD0iMTAwIiBjeT0iNzUiIHI9IjE1IiBmaWxsPSIjMzMzIi8+PC9zdmc+",
+        "Carences": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjE1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZmZmOGNjIi8+PHBvbHlnb24gcG9pbnRzPSIxMDAsMzAgMTMwLDgwIDcwLDgwIiBmaWxsPSIjZmZkNzAwIi8+PC9zdmc+"
+    };
+
+    // === 👨‍🌾 بيانات المندوب الأساسي (أنت) ===
+    const yourDelegate = {
+        id: 1001,
+        nom: "Haddad",
+        prenom: "Haroun",
+        email: "haddad.haroun@doudahAgricoule.dz",
+        telephone: "+213 672 49 99 17",
+        wilaya: "Batna",
+        region: "est",
+        dateAdded: new Date().toISOString()
+    };
+
+    // === 👥 إنشاء مندوبين إضافيين ===
+    const newDelegates = [yourDelegate];
+    
+    const otherDelegates = [
+        { region: "est", wilaya: "Batna", nom: "Bouzid", prenom: "Ahmed" },
+        { region: "est", wilaya: "Constantine", nom: "Mokrani", prenom: "Karim" },
+        { region: "ouest", wilaya: "Oran", nom: "Benkhelifa", prenom: "Yacine" },
+        { region: "nord", wilaya: "Alger", nom: "Brahimi", prenom: "Amine" }
+    ];
+
+    let delegateId = 1002;
+    otherDelegates.forEach(delegate => {
+        newDelegates.push({
+            id: delegateId++,
+            nom: delegate.nom,
+            prenom: delegate.prenom,
+            email: `${delegate.prenom.toLowerCase()}.${delegate.nom.toLowerCase()}@doudahAgricoule.dz`,
+            telephone: `+213 ${Math.floor(600 + Math.random() * 99)} ${Math.floor(1000000 + Math.random() * 9000000)}`,
+            wilaya: delegate.wilaya,
+            region: delegate.region,
+            farmersCount: 0,
+            reportsCount: 0,
+            dateAdded: new Date(Date.now() - Math.random() * 30 * 24 * 60 * 60 * 1000).toISOString()
+        });
+    });
+
+    // === 🧑‍🌾 إنشاء 25 فلاحًا ===
+    const newFarmers = [];
+    const newReports = [];
+    let farmerId = 2000;
+    let reportId = 3000;
+
+    // توليد الفلاحين
+    for (let i = 0; i < 25; i++) {
+        const region = i < 15 ? "est" : 
+                      i < 20 ? "ouest" : 
+                      i < 23 ? "nord" : "sud";
+        
+        const wilayas = wilayasByRegion[region];
+        const wilaya = i < 10 ? "Batna" : wilayas[Math.floor(Math.random() * wilayas.length)];
+        
+        const nomList = region === 'est' ? nomsEst : region === 'ouest' ? nomsOuest : region === 'nord' ? nomsNord : nomsSud;
+        const prenomList = region === 'est' ? prenomsEst : region === 'ouest' ? prenomsOuest : region === 'nord' ? prenomsNord : prenomsSud;
+
+        const nom = nomList[Math.floor(Math.random() * nomList.length)];
+        const prenom = prenomList[Math.floor(Math.random() * prenomList.length)];
+        const culture = cultures[Math.floor(Math.random() * cultures.length)];
+
+        const farmer = {
+            id: farmerId++,
+            nom,
+            prenom,
+            telephone: `+213 ${Math.floor(600 + Math.random() * 99)} ${Math.floor(1000000 + Math.random() * 9000000)}`,
+            wilaya,
+            localisation: `${wilaya}, Algérie`,
+            surface: parseFloat((Math.random() * 20 + 0.5).toFixed(2)),
+            typeCulture: culture,
+            dateAdded: new Date(Date.now() - Math.random() * 30 * 24 * 60 * 60 * 1000).toISOString()
+        };
+
+        // ربط الفلاح بمندوب
+        const regionDelegates = newDelegates.filter(d => d.region === region);
+        if (regionDelegates.length > 0) {
+            const delegate = regionDelegates[Math.floor(Math.random() * regionDelegates.length)];
+            farmer.delegateId = delegate.id;
+            delegate.farmersCount = (delegate.farmersCount || 0) + 1;
+        }
+
+        newFarmers.push(farmer);
+
+        // === 📝 توليد 1-2 تقارير لكل فلاح ===
+        const reportCount = Math.floor(Math.random() * 2) + 1;
+        for (let r = 0; r < reportCount; r++) {
+            const problems = Object.keys(photoByProblem);
+            const problem = problems[Math.floor(Math.random() * problems.length)];
+            const reportDate = new Date(Date.now() - Math.random() * 20 * 24 * 60 * 60 * 1000);
+
+            const report = {
+                id: reportId++,
+                farmerId: farmer.id,
+                description: `Problème de ${problem.toLowerCase()} observé dans la parcelle de ${culture.toLowerCase()}.`,
+                ordonnances: [
+                    { 
+                        title: "Diagnostic", 
+                        content: `Problème confirmé : ${problem}. Symptômes visibles sur les cultures.` 
+                    },
+                    { 
+                        title: "Traitement recommandé", 
+                        content: `Appliquer le traitement adapté selon les normes techniques. Surveiller l'évolution.` 
+                    },
+                    { 
+                        title: "Conseils culturaux", 
+                        content: `Améliorer la gestion de l'irrigation et surveiller les conditions climatiques.` 
+                    }
+                ],
+                photo: photoByProblem[problem],
+                date: reportDate.toISOString(),
+                delegateId: farmer.delegateId,
+                farmerName: `${farmer.prenom} ${farmer.nom}`
+            };
+
+            // تحديث عدد تقارير المندوب
+            const delegate = newDelegates.find(d => d.id === farmer.delegateId);
+            if (delegate) delegate.reportsCount = (delegate.reportsCount || 0) + 1;
+
+            newReports.push(report);
+        }
+    }
+
+    // === 💾 حفظ البيانات في localStorage ===
+    localStorage.setItem('farmers', JSON.stringify(newFarmers));
+    localStorage.setItem('reports', JSON.stringify(newReports));
+    localStorage.setItem('delegates', JSON.stringify(newDelegates));
+
+    // تحديث المتغيرات العالمية
+    if (typeof farmers !== 'undefined') farmers = newFarmers;
+    if (typeof reports !== 'undefined') reports = newReports;
+    if (typeof delegates !== 'undefined') delegates = newDelegates;
+
+    console.log('✅ تم توليد البيانات بنجاح:', {
+        مندوبين: newDelegates.length,
+        فلاحين: newFarmers.length,
+        تقارير: newReports.length
+    });
+
+    // إعادة تحميل الواجهة إذا كانت الدوال موجودة
+    setTimeout(() => {
+        if (typeof updateDashboard === 'function') updateDashboard();
+        if (typeof loadRecentActivities === 'function') loadRecentActivities();
+        if (typeof loadFarmersData === 'function') loadFarmersData();
+        if (typeof loadReportsPage === 'function') loadReportsPage();
+        
+        showToast('✅ تم توليد 25 فلاحًا و40+ تقريرًا بنجاح!', 'success');
+    }, 500);
+}
+
+// === التحقق وتهيئة البيانات عند تحميل الصفحة ===
+document.addEventListener('DOMContentLoaded', function() {
+    // الانتظار قليلاً لضمان تحميل كل شيء
+    setTimeout(() => {
+        const existingFarmers = JSON.parse(localStorage.getItem('farmers') || '[]');
+        const existingReports = JSON.parse(localStorage.getItem('reports') || '[]');
+        
+        // إذا لم توجد بيانات، قم بتوليدها تلقائياً
+        if (existingFarmers.length === 0 && existingReports.length === 0) {
+            console.log('🔍 لم يتم العثور على بيانات، جارِ التوليد التلقائي...');
+            generateSampleData();
+        } else {
+            console.log('📊 تم العثور على بيانات موجودة:', {
+                فلاحين: existingFarmers.length,
+                تقارير: existingReports.length
+            });
+        }
+    }, 1000);
+});
+
+// === إضافة زر للتوليد اليدوي في واجهة المستخدم ===
+function addGenerateDataButton() {
+    // التحقق إذا كان الزر موجوداً بالفعل
+    if (document.getElementById('generate-data-btn')) return;
+    
+    const button = document.createElement('button');
+    button.id = 'generate-data-btn';
+    button.innerHTML = '🔄 توليد بيانات تجريبية';
+    button.style.cssText = `
+        position: fixed;
+        bottom: 80px;
+        right: 20px;
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        color: white;
+        border: none;
+        border-radius: 25px;
+        padding: 12px 20px;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: 500;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        z-index: 1000;
+        transition: all 0.3s ease;
+    `;
+    
+    button.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-2px)';
+        this.style.boxShadow = '0 6px 20px rgba(0,0,0,0.3)';
+    });
+    
+    button.addEventListener('mouseleave', function() {
+        this.style.transform = 'translateY(0)';
+        this.style.boxShadow = '0 4px 15px rgba(0,0,0,0.2)';
+    });
+    
+    button.addEventListener('click', function() {
+        if (confirm('هل تريد توليد بيانات تجريبية جديدة؟ سيتم استبدال البيانات الحالية.')) {
+            generateSampleData();
+        }
+    });
+    
+    document.body.appendChild(button);
+}
+
+// إضافة الزر بعد تحميل الصفحة
+setTimeout(addGenerateDataButton, 2000);
 </script>
 </body>
 </html>
+
