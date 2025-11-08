@@ -915,7 +915,7 @@
             background-color: white;
             border-radius: var(--radius);
             overflow: hidden;
-            min-width: 1100px;
+            min-width: 1500px;
             width: 100%;
         }
    
@@ -3483,7 +3483,7 @@
             }, 300);
         }, 5000);
     }
-    // === توليد بيانات تجريبية تلقائياً ===
+ // === توليد بيانات تجريبية تلقائياً ===
 function generateSampleData() {
     console.log('🎯 بدء توليد البيانات التجريبية...');
     
@@ -3700,54 +3700,8 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }, 1000);
 });
-
-// === إضافة زر للتوليد اليدوي في واجهة المستخدم ===
-function addGenerateDataButton() {
-    // التحقق إذا كان الزر موجوداً بالفعل
-    if (document.getElementById('generate-data-btn')) return;
-    
-    const button = document.createElement('button');
-    button.id = 'generate-data-btn';
-    button.innerHTML = '🔄 توليد بيانات تجريبية';
-    button.style.cssText = `
-        position: fixed;
-        bottom: 80px;
-        right: 20px;
-        background: linear-gradient(135deg, #667eea, #764ba2);
-        color: white;
-        border: none;
-        border-radius: 25px;
-        padding: 12px 20px;
-        cursor: pointer;
-        font-size: 14px;
-        font-weight: 500;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-        z-index: 1000;
-        transition: all 0.3s ease;
-    `;
-    
-    button.addEventListener('mouseenter', function() {
-        this.style.transform = 'translateY(-2px)';
-        this.style.boxShadow = '0 6px 20px rgba(0,0,0,0.3)';
-    });
-    
-    button.addEventListener('mouseleave', function() {
-        this.style.transform = 'translateY(0)';
-        this.style.boxShadow = '0 4px 15px rgba(0,0,0,0.2)';
-    });
-    
-    button.addEventListener('click', function() {
-        if (confirm('هل تريد توليد بيانات تجريبية جديدة؟ سيتم استبدال البيانات الحالية.')) {
-            generateSampleData();
-        }
-    });
-    
-    document.body.appendChild(button);
-}
-
-// إضافة الزر بعد تحميل الصفحة
-setTimeout(addGenerateDataButton, 2000);
 </script>
 </body>
 </html>
+
 
