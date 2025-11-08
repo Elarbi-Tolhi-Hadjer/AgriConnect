@@ -35,7 +35,536 @@
             color: var(--text-color);
             line-height: 1.6;
         }
+        /* تصميم أقسام النموذج */
+.form-section {
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.form-section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e9ecef;
+}
+
+.form-section-header h4 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--primary-dark);
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.form-section-header h4 i {
+    color: var(--primary-color);
+}
+
+.form-section-badge {
+    background: var(--primary-color);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+/* تحسين النموذج داخل المودال */
+.modal-body .form-group {
+    margin-bottom: 20px;
+}
+
+.modal-body .form-group label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    color: #495057;
+    margin-bottom: 8px;
+}
+
+.modal-body .form-group label i {
+    color: var(--primary-color);
+    width: 16px;
+}
+
+.modal-body .form-control {
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.modal-body .form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1);
+}
+
+/* أزرار المودال المحسنة */
+.modal-footer {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+}
+
+.modal-footer .btn {
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.modal-footer .btn-secondary {
+    background: #6c757d;
+    color: white;
+    border: none;
+}
+
+.modal-footer .btn-secondary:hover {
+    background: #5a6268;
+    transform: translateY(-1px);
+}
+
+.modal-footer .btn-primary {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+}
+
+.modal-footer .btn-primary:hover {
+    background: var(--primary-dark);
+    transform: translateY(-1px);
+}
+
+/* تصميم متجاوب للمودال */
+@media (max-width: 768px) {
+    .modal-content {
+        margin: 20px;
+        width: calc(100% - 40px);
+    }
+    
+    .form-section-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .modal-footer {
+        flex-direction: column;
+    }
+    
+    .modal-footer .btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+        /* تصميم بطاقات التقارير المحسنة */
+.report-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    border: 1px solid #eaeaea;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.report-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.report-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    border-bottom: 1px solid #eaeaea;
+}
+
+.report-card-info {
+    flex: 1;
+}
+
+.farmer-name {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--primary-dark);
+    margin-bottom: 5px;
+}
+
+.report-date {
+    font-size: 0.9rem;
+    color: #6c757d;
+    font-weight: 500;
+}
+
+.report-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.report-card-content {
+    padding: 20px;
+}
+
+.report-section {
+    margin-bottom: 25px;
+}
+
+.report-section:last-child {
+    margin-bottom: 0;
+}
+
+.report-section h4 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--primary-dark);
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.report-section h4 i {
+    color: var(--primary-color);
+    width: 20px;
+}
+
+.report-section p {
+    color: #495057;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* تصميم قائمة الوصفات */
+.ordonnances-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.ordonnance-card {
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 15px;
+    transition: all 0.2s ease;
+}
+
+.ordonnance-card:hover {
+    background: #e9ecef;
+    border-color: #dee2e6;
+}
+
+.ordonnance-title {
+    font-weight: 600;
+    color: var(--primary-dark);
+    margin-bottom: 8px;
+    font-size: 1rem;
+}
+
+.ordonnance-content {
+    color: #495057;
+    line-height: 1.5;
+    white-space: pre-line;
+}
+
+/* تصميم الصورة */
+.report-photo-container {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.report-photo {
+    max-width: 100%;
+    max-height: 300px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #eaeaea;
+}
+
+/* تذييل البطاقة */
+.report-card-footer {
+    padding: 15px 20px;
+    background: #f8f9fa;
+    border-top: 1px solid #eaeaea;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.report-id {
+    font-size: 0.8rem;
+    color: #6c757d;
+    font-family: monospace;
+}
+
+/* تحسين الأزرار */
+.btn-action {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: all 0.2s ease;
+}
+
+.btn-edit {
+    background: #e3f2fd;
+    color: #1976d2;
+}
+
+.btn-edit:hover {
+    background: #bbdefb;
+    transform: scale(1.05);
+}
+
+/* تصميم متجاوب */
+@media (max-width: 768px) {
+    .report-card-header {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .report-actions {
+        align-self: flex-end;
+    }
+    
+    .report-card-content {
+        padding: 15px;
+    }
+    
+    .report-section {
+        margin-bottom: 20px;
+    }
+}
+        /* تصميم بطاقات التقارير المحسنة */
+.report-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    border: 1px solid #eaeaea;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.report-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.report-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    border-bottom: 1px solid #eaeaea;
+}
+
+.report-card-info {
+    flex: 1;
+}
+
+.farmer-name {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--primary-dark);
+    margin-bottom: 5px;
+}
+
+.report-date {
+    font-size: 0.9rem;
+    color: #6c757d;
+    font-weight: 500;
+}
+
+.report-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.report-card-content {
+    padding: 20px;
+}
+
+.report-section {
+    margin-bottom: 25px;
+}
+
+.report-section:last-child {
+    margin-bottom: 0;
+}
+
+.report-section h4 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--primary-dark);
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.report-section h4 i {
+    color: var(--primary-color);
+    width: 20px;
+}
+
+.report-section p {
+    color: #495057;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* تصميم قائمة الوصفات */
+.ordonnances-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.ordonnance-card {
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 15px;
+    transition: all 0.2s ease;
+}
+
+.ordonnance-card:hover {
+    background: #e9ecef;
+    border-color: #dee2e6;
+}
+
+.ordonnance-title {
+    font-weight: 600;
+    color: var(--primary-dark);
+    margin-bottom: 8px;
+    font-size: 1rem;
+}
+
+.ordonnance-content {
+    color: #495057;
+    line-height: 1.5;
+    white-space: pre-line;
+}
+
+/* تصميم الصورة */
+.report-photo-container {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.report-photo {
+    max-width: 100%;
+    max-height: 300px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #eaeaea;
+}
+
+/* تذييل البطاقة */
+.report-card-footer {
+    padding: 15px 20px;
+    background: #f8f9fa;
+    border-top: 1px solid #eaeaea;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.report-id {
+    font-size: 0.8rem;
+    color: #6c757d;
+    font-family: monospace;
+}
+
+/* تحسين الأزرار */
+.btn-action {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: all 0.2s ease;
+}
+
+.btn-edit {
+    background: #e3f2fd;
+    color: #1976d2;
+}
+
+.btn-edit:hover {
+    background: #bbdefb;
+    transform: scale(1.05);
+}
+
+/* تصميم متجاوب */
+@media (max-width: 768px) {
+    .report-card-header {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .report-actions {
+        align-self: flex-end;
+    }
+    
+    .report-card-content {
+        padding: 15px;
+    }
+    
+    .report-section {
+        margin-bottom: 20px;
+    }
+}
+       /* حقل النوع المخصص */
+.custom-input {
+    margin-top: 8px;
+    display: none;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+} 
         
+.ordonnance-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.ordonnance-title {
+    font-weight: 600;
+    color: #1b5e20;
+}
+
+.remove-ordonnance {
+    color: #d32f2f;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
         /* Mobile First Layout */
         .app-container {
             display: flex;
@@ -287,24 +816,24 @@
             font-size: 0.9rem;
         }
         
-        /* Forms */
+          /* Forms */
         .form-container {
             background-color: white;
             border-radius: var(--radius);
-            padding: 20px;
+            padding: 30px;
             box-shadow: var(--shadow);
-            margin-bottom: 20px;
+            max-width: 1300px;
         }
         
         .form-header {
-            margin-bottom: 20px;
+            margin-bottom: 25px;
             padding-bottom: 15px;
             border-bottom: 1px solid var(--border-color);
         }
         
         .form-header h2 {
             color: var(--primary-dark);
-            font-size: 1.3rem;
+            font-size: 1.5rem;
             display: flex;
             align-items: center;
         }
@@ -316,13 +845,13 @@
         
         .form-row {
             display: flex;
-            flex-direction: column;
-            gap: 15px;
-            margin-bottom: 15px;
+            gap: 20px;
+            margin-bottom: 20px;
         }
         
         .form-group {
-            margin-bottom: 15px;
+            flex: 1;
+            margin-bottom: 20px;
         }
         
         .form-group label {
@@ -386,9 +915,13 @@
             background-color: white;
             border-radius: var(--radius);
             overflow: hidden;
-            min-width: 1000px;
+            min-width: 1100px;
             width: 100%;
         }
+   
+   
+
+
         
         .cards-container-list {
             display: block; /* Shown on mobile by default */
@@ -485,11 +1018,11 @@
         table {
             width: 100%;
             border-collapse: collapse;
-            min-width: 800px;
+            min-width: 1100px;
         }
         
         th, td {
-            padding: 14px;
+            padding: 16px;
             text-align: left;
             border-bottom: 1px solid var(--border-color);
             white-space: nowrap;
@@ -548,14 +1081,80 @@
             position: relative;
         }
         
-        .map-controls {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            z-index: 1000;
-            display: flex;
-            gap: 10px;
-        }
+        /* أزرار الخريطة في الأسفل */
+.map-controls-bottom {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.map-btn {
+    background-color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 12px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    flex: 1; /* يجعل الأزرار تأخذ نفس العرض */
+    justify-content: center; /* توسيط النص */
+}
+
+.map-btn i {
+    margin-right: 5px;
+}
+/* أزرار الخريطة المخصصة */
+.map-controls-bottom {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.map-btn {
+    border: none;
+    border-radius: 6px;
+    padding: 10px 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    font-weight: 500;
+    flex: 1;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.map-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.map-btn i {
+    margin-right: 6px;
+}
+
+/* زر "Ma position" - لون أخضر */
+#locate-me {
+    background: linear-gradient(135deg, #4CAF50, #2E7D32);
+    color: white;
+}
+
+#locate-me:hover {
+    background: linear-gradient(135deg, #66BB6A, #388E3C);
+}
+
+/* زر "Effacer" - لون أحمر */
+#clear-location {
+    background: linear-gradient(135deg, #F44336, #D32F2F);
+    color: white;
+}
+
+#clear-location:hover {
+    background: linear-gradient(135deg, #EF5350, #C62828);
+}
         
         .map-btn {
             background-color: white;
@@ -834,7 +1433,33 @@
                 grid-template-columns: repeat(4, 1fr);
             }
         }
+          
         
+        /* Additional ordonnance input */
+        .additional-ordonnance {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px dashed var(--border-color);
+        }
+        
+        .add-ordonnance-btn {
+            background-color: var(--light-gray);
+            color: var(--primary-color);
+            border: 1px dashed var(--primary-color);
+            padding: 10px 15px;
+            border-radius: 6px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            margin-top: 10px;
+            transition: var(--transition);
+        }
+        
+        .add-ordonnance-btn:hover {
+            background-color: #e8f5e9;
+        }
         /* Animation for page transitions */
         .page {
             animation: fadeIn 0.5s;
@@ -974,25 +1599,37 @@
                     </div>
                     
                     <!-- Charts Section -->
-                    <div class="form-container">
-                        <div class="form-header">
-                            <h2><i class="fas fa-chart-bar"></i> Analyses Visuelles</h2>
-                        </div>
-                        <div style="display: grid; grid-template-columns: 1fr; gap: 20px;">
-                            <div>
-                                <h3 style="text-align: center; margin-bottom: 10px; color: var(--primary-dark);">
-                                    Rapports par Mois
-                                </h3>
-                                <canvas id="reportsByMonthChart" height="200"></canvas>
-                            </div>
-                            <div>
-                                <h3 style="text-align: center; margin-bottom: 10px; color: var(--primary-dark);">
-                                    Types de Culture
-                                </h3>
-                                <canvas id="cultureTypesChart" height="200"></canvas>
-                            </div>
-                        </div>
-                    </div>
+                   <!-- 📊 Analyses Visuelles - Section avec titres et taille moyenne -->
+<div class="form-container" style="padding: 10px 20px; font-size: 14px;">
+  <div class="form-header" style="text-align: center;">
+    <h2 style="font-size: 18px; margin-bottom: 10px;">
+      <i class="fas fa-chart-bar"></i> Analyses Visuelles
+    </h2>
+  </div>
+
+  <div style="
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 15px;
+      margin-top: 10px;
+  ">
+    <!-- 📅 Graphique 1 : Rapports par mois -->
+    <div style="background: #fff; border-radius: 10px; padding: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+      <h3 style="font-size: 15px; text-align: center; margin-bottom: 5px; color: #2e7d32;">
+        📅 Rapports par Mois
+      </h3>
+      <canvas id="reportsByMonthChart" height="180"></canvas>
+    </div>
+
+    <!-- 🌾 Graphique 2 : Types de culture -->
+    <div style="background: #fff; border-radius: 10px; padding: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+      <h3 style="font-size: 15px; text-align: center; margin-bottom: 5px; color: #2e7d32;">
+        🌾 Types de Culture
+      </h3>
+      <canvas id="cultureTypesChart" height="180"></canvas>
+    </div>
+  </div>
+</div>
                     
                     <!-- Recent Activity -->
                     <div class="form-container">
@@ -1109,11 +1746,12 @@
                             </div>
                             
                             <div class="form-group">
-                                <label for="localisation">Localisation</label>
-                                <input type="text" id="localisation" class="form-control" placeholder="Sélectionner un point sur la carte" readonly required>
+<label for="localisation" class="form-label">
+          <i class="fas fa-map-marker-alt"></i> Localisation du fermier
+        </label>                                <input type="text" id="localisation" class="form-control" placeholder="Sélectionner un point sur la carte" readonly required>
                                 
                                 <div class="location-search" style="margin-top: 10px;">
-                                    <input type="text" id="location-search" placeholder="Rechercher une adresse..." class="form-control">
+                                    <input type="text" id="location-search" placeholder="Rechercher une adresse, commune ou wilaya..." class="form-control">
                                     <button type="button" id="search-location-btn" class="btn" style="margin-top: 10px; width: 100%;">
                                         <i class="fas fa-search"></i> Rechercher
                                     </button>
@@ -1121,14 +1759,14 @@
                                 
                                 <div id="map-add-farmer" class="map-container"></div>
                                 
-                                <div class="map-controls">
-                                    <button type="button" class="map-btn" id="locate-me">
-                                        <i class="fas fa-location-crosshairs"></i> Ma position
-                                    </button>
-                                    <button type="button" class="map-btn" id="clear-location">
-                                        <i class="fas fa-trash-alt"></i> Effacer
-                                    </button>
-                                </div>
+                               <div class="map-controls-bottom">
+        <button type="button" class="map-btn" id="locate-me">
+            <i class="fas fa-location-crosshairs"></i> Ma position
+        </button>
+        <button type="button" class="map-btn" id="clear-location">
+            <i class="fas fa-trash-alt"></i> Effacer
+        </button>
+    </div>
                             </div>
                             
                             <div class="form-row">
@@ -1136,18 +1774,20 @@
                                     <label for="surface">Surface de la ferme (hectares)</label>
                                     <input type="number" id="surface" class="form-control" step="0.1" placeholder="Ex: 5.5" required>
                                 </div>
-                                
-                                <div class="form-group">
-                                    <label for="type-culture">Type de culture</label>
-                                    <select id="type-culture" class="form-control" required>
-                                        <option value="">Sélectionner un type</option>
-                                        <option value="Céréales">Céréales</option>
-                                        <option value="Légumes">Légumes</option>
-                                        <option value="Arboriculture">Arboriculture</option>
-                                        <option value="Élevage">Élevage</option>
-                                        <option value="Autres">Autres</option>
-                                    </select>
-                                </div>
+                                   <div class="form-group">
+        <label for="type-culture">Type de culture</label>
+        <select id="type-culture" class="form-control" required>
+            <option value="">Sélectionner un type</option>
+            <option value="Céréales">Céréales</option>
+            <option value="Légumes">Légumes</option>
+            <option value="Arboriculture">Arboriculture</option>
+            <option value="Élevage">Élevage</option>
+            <option value="Autres">Autres</option>
+        </select>
+        <!-- حقل النوع المخصص - يظهر فقط عند اختيار "Autres" -->
+        <input type="text" id="custom-culture" class="form-control custom-input" 
+               placeholder="Précisez le type de culture" style="display: none; margin-top: 8px;">
+    </div>
                             </div>
                             
                             <button type="submit" class="btn btn-primary" style="width: 100%;">
@@ -1184,7 +1824,21 @@
                                 <label for="ordonnance">Ordonnance / Prescriptions</label>
                                 <textarea id="ordonnance" class="form-control" rows="3" placeholder="Recommandations et prescriptions..." required></textarea>
                             </div>
-                            
+                                    
+                       <!-- في نموذج إرسال التقرير، بعد حقل الوصفة الرئيسي -->
+<div class="form-group">
+    <label for="ordonnance">Ordonnance / Prescriptions</label>
+    <textarea id="ordonnance" class="form-control" rows="3" placeholder="Recommandations et prescriptions..." required></textarea>
+</div>
+
+<!-- أضف هذا الكود هنا -->
+<div id="additional-ordonnances">
+    <!-- الوصفات الإضافية ستظهر هنا تلقائياً -->
+</div>
+
+<button type="button" class="add-ordonnance-btn" id="add-ordonnance">
+    <i class="fas fa-plus"></i> Ajouter une autre ordonnance
+</button>
                             <div class="form-group">
                                 <label for="photo-upload">Ajouter une photo (optionnel)</label>
                                 <input type="file" id="photo-upload" class="form-control" accept="image/*">
@@ -1362,8 +2016,10 @@
                         </div>
                         
                         <div class="form-group">
-                            <label for="edit-localisation">Localisation</label>
-                            <input type="text" id="edit-localisation" class="form-control" required>
+<label for="localisation" class="form-label">
+          <i class="fas fa-map-marker-alt"></i> Localisation du fermier
+        </label>                            <input type="text" id="edit-localisation" class="form-control" required>
+        
                         </div>
                         
                         <div class="form-row">
@@ -1372,17 +2028,20 @@
                                 <input type="number" id="edit-surface" class="form-control" step="0.1" required>
                             </div>
                             
-                            <div class="form-group">
-                                <label for="edit-type-culture">Type de culture</label>
-                                <select id="edit-type-culture" class="form-control" required>
-                                    <option value="">Sélectionner un type</option>
-                                    <option value="Céréales">Céréales</option>
-                                    <option value="Légumes">Légumes</option>
-                                    <option value="Arboriculture">Arboriculture</option>
-                                    <option value="Élevage">Élevage</option>
-                                    <option value="Autres">Autres</option>
-                                </select>
-                            </div>
+                               <div class="form-group">
+        <label for="type-culture">Type de culture</label>
+        <select id="type-culture" class="form-control" required>
+            <option value="">Sélectionner un type</option>
+            <option value="Céréales">Céréales</option>
+            <option value="Légumes">Légumes</option>
+            <option value="Arboriculture">Arboriculture</option>
+            <option value="Élevage">Élevage</option>
+            <option value="Autres">Autres</option>
+        </select>
+        <!-- حقل النوع المخصص - يظهر فقط عند اختيار "Autres" -->
+        <input type="text" id="custom-culture" class="form-control custom-input" 
+               placeholder="Précisez le type de culture" style="display: none; margin-top: 8px;">
+    </div>
                         </div>
                     </form>
                 </div>
@@ -1418,1054 +2077,1008 @@
         </div>
 
         <!-- Edit Report Modal -->
-        <div id="editReportModal" class="modal">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h3>Modifier le rapport</h3>
-                    <button class="close-modal">&times;</button>
+<div id="editReportModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3><i class="fas fa-edit"></i> Modifier le rapport</h3>
+            <button class="close-modal">&times;</button>
+        </div>
+        <div class="modal-body">
+            <form id="edit-report-form">
+                <input type="hidden" id="edit-report-id">
+                
+                <div class="form-group">
+                    <label for="edit-report-description">
+                        <i class="fas fa-file-alt"></i> Description du cas
+                    </label>
+                    <textarea id="edit-report-description" class="form-control" rows="5" 
+                              placeholder="Décrire la situation du fermier..." required></textarea>
                 </div>
-                <div class="modal-body">
-                    <form id="edit-report-form">
-                        <input type="hidden" id="edit-report-id">
-                        <div class="form-group">
-                            <label for="edit-report-description">Description du cas</label>
-                            <textarea id="edit-report-description" class="form-control" rows="5" required></textarea>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="edit-report-ordonnance">Ordonnance / Prescriptions</label>
-                            <textarea id="edit-report-ordonnance" class="form-control" rows="3" required></textarea>
-                        </div>
-                    </form>
+                
+                <div class="form-section">
+                    <div class="form-section-header">
+                        <h4><i class="fas fa-prescription"></i> Ordonnances</h4>
+                        <span class="form-section-badge">Principal</span>
+                    </div>
+                    <div class="form-group">
+                        <label for="edit-report-ordonnance">Ordonnance principale</label>
+                        <textarea id="edit-report-ordonnance" class="form-control" rows="3" 
+                                  placeholder="Recommandations et prescriptions principales..." required></textarea>
+                    </div>
                 </div>
-                <div class="modal-footer">
-                    <button class="btn" id="cancelEditReport">Annuler</button>
-                    <button class="btn btn-primary" id="saveEditReport">Enregistrer</button>
+                
+                <div class="form-section">
+                    <div class="form-section-header">
+                        <h4><i class="fas fa-plus-circle"></i> Ordonnances supplémentaires</h4>
+                        <span class="form-section-badge">Optionnel</span>
+                    </div>
+                    <div id="edit-additional-ordonnances">
+                        <!-- الوصفات الإضافية ستظهر هنا -->
+                    </div>
+                    <button type="button" class="add-ordonnance-btn" id="edit-add-ordonnance">
+                        <i class="fas fa-plus"></i> Ajouter une ordonnance supplémentaire
+                    </button>
                 </div>
-            </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-secondary" id="cancelEditReport">
+                <i class="fas fa-times"></i> Annuler
+            </button>
+            <button class="btn btn-primary" id="saveEditReport">
+                <i class="fas fa-save"></i> Enregistrer les modifications
+            </button>
         </div>
     </div>
+</div>
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+<script>
+    // Data management
+    let farmers = JSON.parse(localStorage.getItem('farmers')) || [];
+    let reports = JSON.parse(localStorage.getItem('reports')) || [];
+    let map, marker;
+    let farmerToDelete = null;
+    let farmerToEdit = null;
+    let reportToEdit = null;
+    
+    // List of 58 wilayas in Algeria grouped by region
+    const wilayasByRegion = {
+        nord: [
+            "Alger", "Blida", "Tizi Ouzou", "Béjaïa", "Boumerdès", "Tipaza", "Bouira", "Medea", "Aïn Defla", "Chlef",
+            "Tissemsilt", "Relizane", "Mostaganem", "Oran", "Mascara", "Saïda", "Sidi Bel Abbès", "Tlemcen", "Aïn Témouchent"
+        ],
+        sud: [
+            "Adrar", "Béchar", "Tindouf", "Bordj Badji Mokhtar", "Timimoun", "Ouled Djellal", "Béni Abbès", "In Salah", "In Guezzam",
+            "Touggourt", "Djanet", "El M'Ghair", "El Menia", "Ghardaïa", "El Oued", "Ouargla", "Illizi", "Tamanrasset"
+        ],
+        est: [
+            "Annaba", "Skikda", "El Tarf", "Souk Ahras", "Guelma", "Constantine", "Mila", "Jijel", "Oum El Bouaghi", "Batna",
+            "Khenchela", "Tébessa", "Sétif", "Bordj Bou Arréridj"
+        ],
+        ouest: [
+            "Tlemcen", "Sidi Bel Abbès", "Mascara", "Mostaganem", "Oran", "Aïn Témouchent", "Relizane", "Saïda", "Tiaret", "Tissemsilt"
+        ]
+    };
+    
+    // All wilayas
+    const allWilayas = [...new Set([
+        ...wilayasByRegion.nord,
+        ...wilayasByRegion.sud,
+        ...wilayasByRegion.est,
+        ...wilayasByRegion.ouest
+    ])];
 
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-    <script>
-        // Data management
-        let farmers = JSON.parse(localStorage.getItem('farmers')) || [];
-        let reports = JSON.parse(localStorage.getItem('reports')) || [];
-        let map, marker;
-        let farmerToDelete = null;
-        let farmerToEdit = null;
-        let reportToEdit = null;
+    // Initialize the application
+    document.addEventListener('DOMContentLoaded', function() {
+        // ترحيل البيانات القديمة
+        reports = migrateOldReports();
         
-        // List of 58 wilayas in Algeria grouped by region
-        const wilayasByRegion = {
-            nord: [
-                "Alger", "Blida", "Tizi Ouzou", "Béjaïa", "Boumerdès", "Tipaza", "Bouira", "Medea", "Aïn Defla", "Chlef",
-                "Tissemsilt", "Relizane", "Mostaganem", "Oran", "Mascara", "Saïda", "Sidi Bel Abbès", "Tlemcen", "Aïn Témouchent"
-            ],
-            sud: [
-                "Adrar", "Béchar", "Tindouf", "Bordj Badji Mokhtar", "Timimoun", "Ouled Djellal", "Béni Abbès", "In Salah", "In Guezzam",
-                "Touggourt", "Djanet", "El M'Ghair", "El Menia", "Ghardaïa", "El Oued", "Ouargla", "Illizi", "Tamanrasset"
-            ],
-            est: [
-                "Annaba", "Skikda", "El Tarf", "Souk Ahras", "Guelma", "Constantine", "Mila", "Jijel", "Oum El Bouaghi", "Batna",
-                "Khenchela", "Tébessa", "Sétif", "Bordj Bou Arréridj"
-            ],
-            ouest: [
-                "Tlemcen", "Sidi Bel Abbès", "Mascara", "Mostaganem", "Oran", "Aïn Témouchent", "Relizane", "Saïda", "Tiaret", "Tissemsilt"
-            ]
-        };
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const sidebar = document.getElementById('sidebar');
+        const sidebarOverlay = document.getElementById('sidebarOverlay');
         
-        // All wilayas
-        const allWilayas = [...new Set([
-            ...wilayasByRegion.nord,
-            ...wilayasByRegion.sud,
-            ...wilayasByRegion.est,
-            ...wilayasByRegion.ouest
-        ])];
-
-        // Initialize the application
-        document.addEventListener('DOMContentLoaded', function() {
-            // Mobile menu toggle
-            const menuToggle = document.getElementById('menuToggle');
-            const sidebar = document.getElementById('sidebar');
-            const sidebarOverlay = document.getElementById('sidebarOverlay');
-            
-            menuToggle.addEventListener('click', function() {
-                sidebar.classList.toggle('active');
-                sidebarOverlay.classList.toggle('active');
+        menuToggle.addEventListener('click', function() {
+            sidebar.classList.toggle('active');
+            sidebarOverlay.classList.toggle('active');
+        });
+        
+        sidebarOverlay.addEventListener('click', function() {
+            sidebar.classList.remove('active');
+            sidebarOverlay.classList.remove('active');
+        });
+        
+        // Navigation
+        const menuItems = document.querySelectorAll('.sidebar-menu li');
+        menuItems.forEach(item => {
+            item.addEventListener('click', function() {
+                if (window.innerWidth < 768) {
+                    sidebar.classList.remove('active');
+                    sidebarOverlay.classList.remove('active');
+                }
+                
+                menuItems.forEach(i => i.classList.remove('active'));
+                this.classList.add('active');
+                
+                const targetId = this.querySelector('a').getAttribute('href').substring(1);
+                showPage(targetId);
             });
-            
-            sidebarOverlay.addEventListener('click', function() {
-                sidebar.classList.remove('active');
-                sidebarOverlay.classList.remove('active');
-            });
-            
-            // Navigation
-            const menuItems = document.querySelectorAll('.sidebar-menu li');
-            menuItems.forEach(item => {
-                item.addEventListener('click', function() {
-                    if (window.innerWidth < 768) {
-                        sidebar.classList.remove('active');
-                        sidebarOverlay.classList.remove('active');
-                    }
-                    
-                    menuItems.forEach(i => i.classList.remove('active'));
-                    this.classList.add('active');
-                    
-                    const targetId = this.querySelector('a').getAttribute('href').substring(1);
-                    showPage(targetId);
-                });
-            });
-            
-            // View toggle for farmers list
-            const toggleButtons = document.querySelectorAll('.toggle-btn');
-            toggleButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    toggleButtons.forEach(btn => btn.classList.remove('active'));
-                    this.classList.add('active');
-                    
-                    const view = this.dataset.view;
-                    if (view === 'table') {
-                        document.querySelector('.table-wrapper').style.display = 'block';
-                        document.querySelector('.cards-container-list').style.display = 'none';
-                    } else {
-                        document.querySelector('.table-wrapper').style.display = 'none';
-                        document.querySelector('.cards-container-list').style.display = 'block';
-                    }
-                });
-            });
-            
-            // Floating button
-            document.getElementById('add-farmer-float').addEventListener('click', function() {
-                showPage('ajouter-fermier');
-                document.querySelectorAll('.sidebar-menu li').forEach(item => item.classList.remove('active'));
-                document.querySelector('.sidebar-menu a[href="#ajouter-fermier"]').parentElement.classList.add('active');
-            });
-            
-            // Form submissions
-            document.getElementById('add-farmer-form').addEventListener('submit', function(e) {
-                e.preventDefault();
-                addFarmer();
-            });
-            
-            document.getElementById('send-report-form').addEventListener('submit', function(e) {
-                e.preventDefault();
-                sendReport();
-            });
-            
-            document.getElementById('profile-form').addEventListener('submit', function(e) {
-                e.preventDefault();
-                updateProfile();
-            });
-            
-            document.getElementById('security-form').addEventListener('submit', function(e) {
-                e.preventDefault();
-                updatePassword();
-            });
-            
-            // Region filter
-            document.querySelectorAll('.region-btn').forEach(btn => {
-                btn.addEventListener('click', function() {
-                    document.querySelectorAll('.region-btn').forEach(b => b.classList.remove('active'));
-                    this.classList.add('active');
-                    filterFarmersByRegion(this.dataset.region);
-                });
-            });
-            
-            // Search functionality
-            document.getElementById('search-farmer').addEventListener('input', function() {
-                filterFarmers();
-            });
-            
-            document.getElementById('filter-culture').addEventListener('change', function() {
-                filterFarmers();
-            });
-            
-            document.getElementById('filter-wilaya').addEventListener('change', function() {
-                filterFarmers();
-            });
-            
-            // Report search and filter
-            document.getElementById('search-report').addEventListener('input', function() {
-                filterReports();
-            });
-            
-            document.getElementById('filter-farmer-report').addEventListener('change', function() {
-                filterReports();
-            });
-            
-            document.getElementById('filter-date-report').addEventListener('change', function() {
-                filterReports();
-            });
-            
-            // Image preview
-            document.getElementById('photo-upload').addEventListener('change', function() {
-                const file = this.files[0];
-                if (file) {
-                    const reader = new FileReader();
-                    reader.onload = function(e) {
-                        document.getElementById('preview-img').src = e.target.result;
-                        document.getElementById('image-preview').style.display = 'block';
-                    };
-                    reader.readAsDataURL(file);
+        });
+        
+        // View toggle for farmers list
+        const toggleButtons = document.querySelectorAll('.toggle-btn');
+        toggleButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                toggleButtons.forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+                
+                const view = this.dataset.view;
+                if (view === 'table') {
+                    document.querySelector('.table-wrapper').style.display = 'block';
+                    document.querySelector('.cards-container-list').style.display = 'none';
+                } else {
+                    document.querySelector('.table-wrapper').style.display = 'none';
+                    document.querySelector('.cards-container-list').style.display = 'block';
                 }
             });
-            
-            // Modal functionality
-            setupModals();
-            
-            // Initialize maps
-            initMap();
-            
-            // Load data
-            loadFarmers();
-            loadReports();
-            updateDashboard();
-            loadRecentActivities();
-            
-            // Load wilayas
-            loadWilayas();
-            
-            // Show initial page
-            showPage('dashboard');
+        });
+        
+        // Floating button
+        document.getElementById('add-farmer-float').addEventListener('click', function() {
+            showPage('ajouter-fermier');
+            document.querySelectorAll('.sidebar-menu li').forEach(item => item.classList.remove('active'));
+            document.querySelector('.sidebar-menu a[href="#ajouter-fermier"]').parentElement.classList.add('active');
         });
 
-        // Setup modal functionality
-        function setupModals() {
-            const deleteModal = document.getElementById('deleteModal');
-            const editModal = document.getElementById('editFarmerModal');
-            const viewModal = document.getElementById('viewFarmerModal');
-            const editReportModal = document.getElementById('editReportModal');
-            const closeButtons = document.querySelectorAll('.close-modal');
-            
-            closeButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    deleteModal.style.display = 'none';
-                    editModal.style.display = 'none';
-                    viewModal.style.display = 'none';
-                    editReportModal.style.display = 'none';
-                });
+        // إضافة وصفة جديدة
+        document.getElementById('add-ordonnance').addEventListener('click', function() {
+            addOrdonnanceField('additional-ordonnances');
+        });
+
+        // إضافة وصفة جديدة في التعديل
+        document.getElementById('edit-add-ordonnance').addEventListener('click', function() {
+            addOrdonnanceField('edit-additional-ordonnances');
+        });
+
+        // التحكم في حقل النوع المخصص
+        document.getElementById('type-culture').addEventListener('change', function() {
+            const customInput = document.getElementById('custom-culture');
+            if (this.value === 'Autres') {
+                customInput.style.display = 'block';
+                customInput.required = true;
+            } else {
+                customInput.style.display = 'none';
+                customInput.required = false;
+            }
+        });
+
+        // Form submissions
+        document.getElementById('add-farmer-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            addFarmer();
+        });
+        
+        document.getElementById('send-report-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            sendReport();
+        });
+        
+        document.getElementById('profile-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            updateProfile();
+        });
+        
+        document.getElementById('security-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            updatePassword();
+        });
+        
+        // Region filter
+        document.querySelectorAll('.region-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.region-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                filterFarmersByRegion(this.dataset.region);
             });
-            
-            document.getElementById('cancelDelete').addEventListener('click', function() {
+        });
+        
+        // Search functionality
+        document.getElementById('search-farmer').addEventListener('input', function() {
+            filterFarmers();
+        });
+        
+        document.getElementById('filter-culture').addEventListener('change', function() {
+            filterFarmers();
+        });
+        
+        document.getElementById('filter-wilaya').addEventListener('change', function() {
+            filterFarmers();
+        });
+        
+        // Report search and filter
+        document.getElementById('search-report').addEventListener('input', function() {
+            filterReports();
+        });
+        
+        document.getElementById('filter-farmer-report').addEventListener('change', function() {
+            filterReports();
+        });
+        
+        document.getElementById('filter-date-report').addEventListener('change', function() {
+            filterReports();
+        });
+        
+        // Image preview
+        document.getElementById('photo-upload').addEventListener('change', function() {
+            const file = this.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    document.getElementById('preview-img').src = e.target.result;
+                    document.getElementById('image-preview').style.display = 'block';
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+        
+        // Modal functionality
+        setupModals();
+        
+        // Initialize maps
+        initMap();
+        
+        // Load data
+        loadFarmers();
+        updateDashboard();
+        loadRecentActivities();
+        
+        // Load wilayas
+        loadWilayas();
+        
+        // Show initial page
+        showPage('dashboard');
+    });
+
+    // دالة ترحيل البيانات القديمة
+    function migrateOldReports() {
+        const oldReports = JSON.parse(localStorage.getItem('reports')) || [];
+        
+        const migratedReports = oldReports.map(report => {
+            // إذا كان التقرير قديماً ولا يحتوي على ordonnances
+            if (!report.ordonnances && report.ordonnance) {
+                return {
+                    ...report,
+                    ordonnances: [
+                        {
+                            title: 'Ordonnance principale',
+                            content: report.ordonnance
+                        }
+                    ]
+                };
+            }
+            return report;
+        });
+        
+        localStorage.setItem('reports', JSON.stringify(migratedReports));
+        return migratedReports;
+    }
+
+    // Setup modal functionality
+    function setupModals() {
+        const deleteModal = document.getElementById('deleteModal');
+        const editModal = document.getElementById('editFarmerModal');
+        const viewModal = document.getElementById('viewFarmerModal');
+        const editReportModal = document.getElementById('editReportModal');
+        const closeButtons = document.querySelectorAll('.close-modal');
+        
+        closeButtons.forEach(button => {
+            button.addEventListener('click', function() {
                 deleteModal.style.display = 'none';
-            });
-            
-            document.getElementById('confirmDelete').addEventListener('click', function() {
-                if (farmerToDelete) {
-                    deleteFarmer(farmerToDelete);
-                    deleteModal.style.display = 'none';
-                    farmerToDelete = null;
-                }
-            });
-            
-            document.getElementById('cancelEdit').addEventListener('click', function() {
                 editModal.style.display = 'none';
-            });
-            
-            document.getElementById('saveEdit').addEventListener('click', function() {
-                saveFarmerEdit();
-            });
-            
-            document.getElementById('closeView').addEventListener('click', function() {
                 viewModal.style.display = 'none';
-            });
-            
-            document.getElementById('cancelEditReport').addEventListener('click', function() {
                 editReportModal.style.display = 'none';
             });
-            
-            document.getElementById('saveEditReport').addEventListener('click', function() {
-                saveReportEdit();
-            });
-            
-            // Close modal when clicking outside
-            window.addEventListener('click', function(e) {
-                if (e.target === deleteModal) {
-                    deleteModal.style.display = 'none';
-                }
-                if (e.target === editModal) {
-                    editModal.style.display = 'none';
-                }
-                if (e.target === viewModal) {
-                    viewModal.style.display = 'none';
-                }
-                if (e.target === editReportModal) {
-                    editReportModal.style.display = 'none';
-                }
-            });
-        }
+        });
+        
+        document.getElementById('cancelDelete').addEventListener('click', function() {
+            deleteModal.style.display = 'none';
+        });
+        
+        document.getElementById('confirmDelete').addEventListener('click', function() {
+            if (farmerToDelete) {
+                deleteFarmer(farmerToDelete);
+                deleteModal.style.display = 'none';
+                farmerToDelete = null;
+            }
+        });
+        
+        document.getElementById('cancelEdit').addEventListener('click', function() {
+            editModal.style.display = 'none';
+        });
+        
+        document.getElementById('saveEdit').addEventListener('click', function() {
+            saveFarmerEdit();
+        });
+        
+        document.getElementById('closeView').addEventListener('click', function() {
+            viewModal.style.display = 'none';
+        });
+        
+        document.getElementById('cancelEditReport').addEventListener('click', function() {
+            editReportModal.style.display = 'none';
+        });
+        
+        document.getElementById('saveEditReport').addEventListener('click', function() {
+            saveReportEdit();
+        });
+        
+        // Close modal when clicking outside
+        window.addEventListener('click', function(e) {
+            if (e.target === deleteModal) {
+                deleteModal.style.display = 'none';
+            }
+            if (e.target === editModal) {
+                editModal.style.display = 'none';
+            }
+            if (e.target === viewModal) {
+                viewModal.style.display = 'none';
+            }
+            if (e.target === editReportModal) {
+                editReportModal.style.display = 'none';
+            }
+        });
+    }
 
-        // Load wilayas into select elements
-        function loadWilayas() {
-            const wilayaSelects = [
-                document.getElementById('wilaya'),
-                document.getElementById('edit-wilaya'),
-                document.getElementById('filter-wilaya'),
-                document.getElementById('profile-wilaya')
-            ];
-            
-            wilayaSelects.forEach(select => {
-                if (select) {
-                    allWilayas.forEach(wilaya => {
-                        const option = document.createElement('option');
-                        option.value = wilaya;
-                        option.textContent = wilaya;
-                        select.appendChild(option);
-                    });
-                }
-            });
-        }
+    // Load wilayas into select elements
+    function loadWilayas() {
+        const wilayaSelects = [
+            document.getElementById('wilaya'),
+            document.getElementById('edit-wilaya'),
+            document.getElementById('filter-wilaya'),
+            document.getElementById('profile-wilaya')
+        ];
+        
+        wilayaSelects.forEach(select => {
+            if (select) {
+                allWilayas.forEach(wilaya => {
+                    const option = document.createElement('option');
+                    option.value = wilaya;
+                    option.textContent = wilaya;
+                    select.appendChild(option);
+                });
+            }
+        });
+    }
 
-        // Initialize map for adding farmer
-        function initMap() {
-            // Default to Algeria
-            map = L.map('map-add-farmer').setView([28.0339, 1.6596], 5);
-            
-            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-            }).addTo(map);
-            
-            // Add click event to map
-            map.on('click', function(e) {
-                setLocationMarker(e.latlng);
-                getLocationName(e.latlng.lat, e.latlng.lng);
-            });
-            
-            // Locate me button
-            document.getElementById('locate-me').addEventListener('click', function() {
-                if (navigator.geolocation) {
-                    navigator.geolocation.getCurrentPosition(function(position) {
-                        const lat = position.coords.latitude;
-                        const lng = position.coords.longitude;
-                        
-                        map.setView([lat, lng], 13);
-                        setLocationMarker([lat, lng]);
-                        getLocationName(lat, lng);
-                    }, function(error) {
-                        showToast('Impossible de récupérer votre position', 'error');
-                    });
-                } else {
-                    showToast('La géolocalisation n\'est pas supportée par votre navigateur', 'error');
-                }
-            });
-            
-            // Search location button
-            document.getElementById('search-location-btn').addEventListener('click', function() {
-                const query = document.getElementById('location-search').value;
-                if (query) {
-                    searchLocation(query);
-                }
-            });
-            
-            // Clear location button
-            document.getElementById('clear-location').addEventListener('click', function() {
-                if (marker) {
-                    map.removeLayer(marker);
-                    marker = null;
-                }
-                document.getElementById('localisation').value = '';
-                document.getElementById('location-search').value = '';
-            });
-        }
-
-        // Set location marker on map
-        function setLocationMarker(latlng) {
+    // Initialize map for adding farmer
+    function initMap() {
+        // Default to Algeria
+        map = L.map('map-add-farmer').setView([28.0339, 1.6596], 5);
+        
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+        
+        // Add click event to map
+        map.on('click', function(e) {
+            setLocationMarker(e.latlng);
+            getLocationName(e.latlng.lat, e.latlng.lng);
+        });
+        
+        // Locate me button
+        document.getElementById('locate-me').addEventListener('click', function() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function(position) {
+                    const lat = position.coords.latitude;
+                    const lng = position.coords.longitude;
+                    
+                    map.setView([lat, lng], 13);
+                    setLocationMarker([lat, lng]);
+                    getLocationName(lat, lng);
+                }, function(error) {
+                    showToast('Impossible de récupérer votre position', 'error');
+                });
+            } else {
+                showToast('La géolocalisation n\'est pas supportée par votre navigateur', 'error');
+            }
+        });
+        
+        // Search location button
+        document.getElementById('search-location-btn').addEventListener('click', function() {
+            const query = document.getElementById('location-search').value;
+            if (query) {
+                searchLocation(query);
+            }
+        });
+        
+        // Clear location button
+        document.getElementById('clear-location').addEventListener('click', function() {
             if (marker) {
                 map.removeLayer(marker);
+                marker = null;
             }
-            
-            marker = L.marker(latlng).addTo(map)
-                .bindPopup('Position sélectionnée')
-                .openPopup();
-            
-            document.getElementById('localisation').value = latlng.lat.toFixed(6) + ', ' + latlng.lng.toFixed(6);
-        }
+            document.getElementById('localisation').value = '';
+            document.getElementById('location-search').value = '';
+        });
+    }
 
-        // Get location name from coordinates
-        function getLocationName(lat, lng) {
-            fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lng}&accept-language=fr`)
-                .then(response => response.json())
-                .then(data => {
-                    if (data && data.display_name) {
-                        document.getElementById('localisation').value = data.display_name;
-                    }
-                })
-                .catch(() => {
-                    // Fallback to coordinates if geocoding fails
-                    document.getElementById('localisation').value = `${lat.toFixed(6)}, ${lng.toFixed(6)}`;
-                });
+    // Set location marker on map
+    function setLocationMarker(latlng) {
+        if (marker) {
+            map.removeLayer(marker);
         }
+        
+        marker = L.marker(latlng).addTo(map)
+            .bindPopup('Position sélectionnée')
+            .openPopup();
+        
+        document.getElementById('localisation').value = latlng.lat.toFixed(6) + ', ' + latlng.lng.toFixed(6);
+    }
 
-        // Search location by query
-        function searchLocation(query) {
-            if (!query.trim()) return;
-            fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(query + ', Algérie')}&accept-language=fr&countrycodes=DZ`)
-                .then(response => response.json())
-                .then(results => {
-                    if (results && results.length > 0) {
-                        const first = results[0];
-                        const lat = parseFloat(first.lat);
-                        const lng = parseFloat(first.lon);
-                        map.setView([lat, lng], 12);
-                        setLocationMarker([lat, lng]);
-                        document.getElementById('localisation').value = first.display_name;
-                        showToast(`Localisation trouvée : ${first.display_name}`, 'success');
-                    } else {
-                        showToast('Aucun résultat trouvé en Algérie', 'error');
-                    }
-                })
-                .catch(() => {
-                    showToast('Erreur lors de la recherche de localisation', 'error');
-                });
+    // Get location name from coordinates
+    function getLocationName(lat, lng) {
+        fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lng}&accept-language=fr`)
+            .then(response => response.json())
+            .then(data => {
+                if (data && data.display_name) {
+                    document.getElementById('localisation').value = data.display_name;
+                }
+            })
+            .catch(() => {
+                // Fallback to coordinates if geocoding fails
+                document.getElementById('localisation').value = `${lat.toFixed(6)}, ${lng.toFixed(6)}`;
+            });
+    }
+
+    // Search location by query
+    function searchLocation(query) {
+        if (!query.trim()) return;
+        fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(query + ', Algérie')}&accept-language=fr&countrycodes=DZ`)
+            .then(response => response.json())
+            .then(results => {
+                if (results && results.length > 0) {
+                    const first = results[0];
+                    const lat = parseFloat(first.lat);
+                    const lng = parseFloat(first.lon);
+                    map.setView([lat, lng], 12);
+                    setLocationMarker([lat, lng]);
+                    document.getElementById('localisation').value = first.display_name;
+                    showToast(`Localisation trouvée : ${first.display_name}`, 'success');
+                } else {
+                    showToast('Aucun résultat trouvé en Algérie', 'error');
+                }
+            })
+            .catch(() => {
+                showToast('Erreur lors de la recherche de localisation', 'error');
+            });
+    }
+
+    // Show page with animation
+    function showPage(pageId) {
+        const pages = document.querySelectorAll('.page');
+        pages.forEach(page => page.style.display = 'none');
+        
+        document.getElementById(pageId).style.display = 'block';
+        
+        // Special handling for certain pages
+        if (pageId === 'liste-fermiers') {
+            loadFarmersData();
+        } else if (pageId === 'envoyer-rapport') {
+            loadFarmersSelect();
+        } else if (pageId === 'rapports-passes') {
+            loadReportsPage();
         }
+    }
 
-        // Show page with animation
-        function showPage(pageId) {
-            const pages = document.querySelectorAll('.page');
-            pages.forEach(page => page.style.display = 'none');
-            
-            document.getElementById(pageId).style.display = 'block';
-            
-            // Special handling for certain pages
-            if (pageId === 'liste-fermiers') {
-                loadFarmersData();
-            } else if (pageId === 'envoyer-rapport') {
-                loadFarmersSelect();
-            } else if (pageId === 'rapports-passes') {
-                loadReportsPage();
-            }
-        }
+    // Load farmers from localStorage
+    function loadFarmers() {
+        farmers = JSON.parse(localStorage.getItem('farmers')) || [];
+    }
 
-        // Load farmers from localStorage
-        function loadFarmers() {
-            farmers = JSON.parse(localStorage.getItem('farmers')) || [];
-        }
+    // Load reports from localStorage
+    function loadReports() {
+        reports = JSON.parse(localStorage.getItem('reports')) || [];
+    }
 
-        // Load reports from localStorage
-        function loadReports() {
-            reports = JSON.parse(localStorage.getItem('reports')) || [];
-        }
+    // Update dashboard statistics
+    function updateDashboard() {
+        document.getElementById('total-farmers').textContent = farmers.length;
+        document.getElementById('total-reports').textContent = reports.length;
+        
+        // Calculate weekly reports
+        const oneWeekAgo = new Date();
+        oneWeekAgo.setDate(oneWeekAgo.getDate() - 7);
+        const weeklyReports = reports.filter(report => new Date(report.date) >= oneWeekAgo);
+        document.getElementById('weekly-reports').textContent = weeklyReports.length;
+        
+        // Calculate regions covered
+        const regions = [...new Set(farmers.map(farmer => farmer.wilaya))].filter(wilaya => wilaya);
+        document.getElementById('regions-covered').textContent = regions.length;
+        
+        // Render charts
+        renderCharts();
+    }
 
-        // Update dashboard statistics
-        function updateDashboard() {
-            document.getElementById('total-farmers').textContent = farmers.length;
-            document.getElementById('total-reports').textContent = reports.length;
-            
-            // Calculate weekly reports
-            const oneWeekAgo = new Date();
-            oneWeekAgo.setDate(oneWeekAgo.getDate() - 7);
-            const weeklyReports = reports.filter(report => new Date(report.date) >= oneWeekAgo);
-            document.getElementById('weekly-reports').textContent = weeklyReports.length;
-            
-            // Calculate regions covered
-            const regions = [...new Set(farmers.map(farmer => farmer.wilaya))].filter(wilaya => wilaya);
-            document.getElementById('regions-covered').textContent = regions.length;
-            
-            // Render charts
-            renderCharts();
-        }
-
-        // Render charts for dashboard
-        function renderCharts() {
-            // Reports by month chart
-            new Chart(document.getElementById('reportsByMonthChart'), {
-                type: 'bar',
-                data: {
-                    labels: ['Jan', 'Fév', 'Mars', 'Avr', 'Mai', 'Juin'],
-                    datasets: [{
-                        label: 'Rapports par mois',
-                        data: [12, 18, 25, 21, 30, 27],
-                        backgroundColor: '#4caf50'
-                    }]
-                },
-                options: { 
-                    responsive: true, 
-                    plugins: { legend: { display: false } },
-                    scales: {
-                        y: {
-                            beginAtZero: true
-                        }
+    // Render charts for dashboard
+    function renderCharts() {
+        // Reports by month chart
+        new Chart(document.getElementById('reportsByMonthChart'), {
+            type: 'bar',
+            data: {
+                labels: ['Jan', 'Fév', 'Mars', 'Avr', 'Mai', 'Juin'],
+                datasets: [{
+                    label: 'Rapports par mois',
+                    data: [12, 18, 25, 21, 30, 27],
+                    backgroundColor: '#4caf50'
+                }]
+            },
+            options: { 
+                responsive: true, 
+                plugins: { legend: { display: false } },
+                scales: {
+                    y: {
+                        beginAtZero: true
                     }
                 }
-            });
-            
-            // Culture types chart
-            new Chart(document.getElementById('cultureTypesChart'), {
-                type: 'pie',
-                data: {
-                    labels: ['Céréales', 'Légumes', 'Arboriculture', 'Élevage', 'Autres'],
-                    datasets: [{
-                        data: [40, 25, 15, 12, 8],
-                        backgroundColor: ['#4caf50', '#81c784', '#a5d6a7', '#c8e6c9', '#e8f5e9']
-                    }]
-                },
-                options: { 
-                    responsive: true, 
-                    plugins: { 
-                        legend: { 
-                            position: 'bottom' 
-                        } 
+            }
+        });
+        
+        // Culture types chart
+        new Chart(document.getElementById('cultureTypesChart'), {
+            type: 'pie',
+            data: {
+                labels: ['Céréales', 'Légumes', 'Arboriculture', 'Élevage', 'Autres'],
+                datasets: [{
+                    data: [40, 25, 15, 12, 8],
+                    backgroundColor: ['#4caf50', '#81c784', '#a5d6a7', '#c8e6c9', '#e8f5e9']
+                }]
+            },
+            options: { 
+                responsive: true, 
+                plugins: { 
+                    legend: { 
+                        position: 'bottom' 
                     } 
-                }
-            });
-        }
+                } 
+            }
+        });
+    }
 
-        // Load recent activities
-        function loadRecentActivities() {
-            const container = document.getElementById('recent-activities');
-            container.innerHTML = '';
+    // Load recent activities
+    function loadRecentActivities() {
+        const container = document.getElementById('recent-activities');
+        container.innerHTML = '';
+        
+        // Combine recent farmers and reports
+        const recentFarmers = farmers
+            .sort((a, b) => new Date(b.dateAdded) - new Date(a.dateAdded))
+            .slice(0, 3);
             
-            // Combine recent farmers and reports
-            const recentFarmers = farmers
-                .sort((a, b) => new Date(b.dateAdded) - new Date(a.dateAdded))
-                .slice(0, 3);
-                
-            const recentReports = reports
-                .sort((a, b) => new Date(b.date) - new Date(a.date))
-                .slice(0, 3);
-            
-            // Create activities from both
-            const activities = [];
-            
-            recentFarmers.forEach(farmer => {
+        const recentReports = reports
+            .sort((a, b) => new Date(b.date) - new Date(a.date))
+            .slice(0, 3);
+        
+        // Create activities from both
+        const activities = [];
+        
+        recentFarmers.forEach(farmer => {
+            activities.push({
+                type: 'farmer',
+                title: 'Nouveau fermier ajouté',
+                description: `${farmer.prenom} ${farmer.nom} ajouté`,
+                date: new Date(farmer.dateAdded)
+            });
+        });
+        
+        recentReports.forEach(report => {
+            const farmer = farmers.find(f => f.id === report.farmerId);
+            if (farmer) {
                 activities.push({
-                    type: 'farmer',
-                    title: 'Nouveau fermier ajouté',
-                    description: `${farmer.prenom} ${farmer.nom} ajouté`,
-                    date: new Date(farmer.dateAdded)
+                    type: 'report',
+                    title: 'Rapport envoyé',
+                    description: `Rapport pour ${farmer.prenom} ${farmer.nom}`,
+                    date: new Date(report.date)
                 });
-            });
-            
-            recentReports.forEach(report => {
-                const farmer = farmers.find(f => f.id === report.farmerId);
-                if (farmer) {
-                    activities.push({
-                        type: 'report',
-                        title: 'Rapport envoyé',
-                        description: `Rapport pour ${farmer.prenom} ${farmer.nom}`,
-                        date: new Date(report.date)
-                    });
-                }
-            });
-            
-            // Sort by date and take top 5
-            activities.sort((a, b) => b.date - a.date).slice(0, 5).forEach(activity => {
-                const alert = document.createElement('div');
-                alert.className = 'card';
-                alert.innerHTML = `
-                    <div style="display: flex; align-items: center;">
-                        <i class="fas fa-${activity.type === 'farmer' ? 'user-plus' : 'file-alt'}" style="color: var(--primary-color); margin-right: 10px;"></i>
-                        <div>
-                            <h4 style="margin: 0; font-size: 1rem;">${activity.title}</h4>
-                            <p style="margin: 5px 0 0; font-size: 0.9rem; color: #666;">${activity.description} - ${formatDate(activity.date)}</p>
-                        </div>
+            }
+        });
+        
+        // Sort by date and take top 5
+        activities.sort((a, b) => b.date - a.date).slice(0, 5).forEach(activity => {
+            const alert = document.createElement('div');
+            alert.className = 'card';
+            alert.innerHTML = `
+                <div style="display: flex; align-items: center;">
+                    <i class="fas fa-${activity.type === 'farmer' ? 'user-plus' : 'file-alt'}" style="color: var(--primary-color); margin-right: 10px;"></i>
+                    <div>
+                        <h4 style="margin: 0; font-size: 1rem;">${activity.title}</h4>
+                        <p style="margin: 5px 0 0; font-size: 0.9rem; color: #666;">${activity.description} - ${formatDate(activity.date)}</p>
                     </div>
-                `;
-                container.appendChild(alert);
-            });
-            
-            if (activities.length === 0) {
-                container.innerHTML = '<p style="text-align: center; color: #666;">Aucune activité récente</p>';
-            }
+                </div>
+            `;
+            container.appendChild(alert);
+        });
+        
+        if (activities.length === 0) {
+            container.innerHTML = '<p style="text-align: center; color: #666;">Aucune activité récente</p>';
         }
+    }
 
-        // Format date for display
-        function formatDate(date) {
-            const now = new Date();
-            const diffMs = now - date;
-            const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
-            const diffHours = Math.floor(diffMs / (1000 * 60 * 60));
-            const diffMinutes = Math.floor(diffMs / (1000 * 60));
-            
-            if (diffDays > 0) {
-                return `il y a ${diffDays} jour${diffDays > 1 ? 's' : ''}`;
-            } else if (diffHours > 0) {
-                return `il y a ${diffHours} heure${diffHours > 1 ? 's' : ''}`;
-            } else if (diffMinutes > 0) {
-                return `il y a ${diffMinutes} minute${diffMinutes > 1 ? 's' : ''}`;
-            } else {
-                return 'à l\'instant';
-            }
+    // Format date for display
+    function formatDate(date) {
+        const now = new Date();
+        const diffMs = now - date;
+        const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+        const diffHours = Math.floor(diffMs / (1000 * 60 * 60));
+        const diffMinutes = Math.floor(diffMs / (1000 * 60));
+        
+        if (diffDays > 0) {
+            return `il y a ${diffDays} jour${diffDays > 1 ? 's' : ''}`;
+        } else if (diffHours > 0) {
+            return `il y a ${diffHours} heure${diffHours > 1 ? 's' : ''}`;
+        } else if (diffMinutes > 0) {
+            return `il y a ${diffMinutes} minute${diffMinutes > 1 ? 's' : ''}`;
+        } else {
+            return 'à l\'instant';
         }
+    }
 
-        // Load farmers data for list page
-        function loadFarmersData() {
-            // Load table view
-            const tbody = document.getElementById('farmers-tbody');
-            tbody.innerHTML = '';
-            
-            if (farmers.length === 0) {
-                tbody.innerHTML = '<tr><td colspan="6" style="text-align: center; padding: 20px;">Aucun fermier enregistré</td></tr>';
-            } else {
-                farmers.forEach(farmer => {
-                    const row = document.createElement('tr');
-                    row.innerHTML = `
-                        <td>${farmer.nom} ${farmer.prenom}</td>
-                        <td>${farmer.telephone}</td>
-                        <td>${farmer.localisation}</td>
-                        <td>${farmer.wilaya || 'Non spécifiée'}</td>
-                        <td>${farmer.typeCulture}</td>
-                        <td>
-                            <div class="action-buttons">
-                                <button class="btn-action btn-edit" onclick="editFarmerModal(${farmer.id})">
-                                    <i class="fas fa-edit"></i> Modifier
-                                </button>
-                                <button class="btn-action btn-delete" onclick="confirmDeleteFarmer(${farmer.id})">
-                                    <i class="fas fa-trash"></i> Supprimer
-                                </button>
-                                <button class="btn-action btn-view" onclick="viewFarmerModal(${farmer.id})">
-                                    <i class="fas fa-eye"></i> Voir
-                                </button>
-                            </div>
-                        </td>
-                    `;
-                    tbody.appendChild(row);
-                });
-            }
-            
-            // Load cards view
-            const cardsContainer = document.getElementById('farmers-cards');
-            cardsContainer.innerHTML = '';
-            
-            if (farmers.length === 0) {
-                cardsContainer.innerHTML = '<p style="text-align: center; color: #666;">Aucun fermier enregistré</p>';
-            } else {
-                farmers.forEach(farmer => {
-                    const card = document.createElement('div');
-                    card.className = 'farmer-card';
-                    card.innerHTML = `
-                        <div class="farmer-header">
-                            <div class="farmer-name">${farmer.prenom} ${farmer.nom}</div>
-                        </div>
-                        <div class="farmer-phone">${farmer.telephone}</div>
-                        <div class="farmer-details">
-                            <div><strong>Localisation:</strong> ${farmer.localisation}</div>
-                            <div><strong>Wilaya:</strong> ${farmer.wilaya || 'Non spécifiée'}</div>
-                            <div><strong>Type de culture:</strong> ${farmer.typeCulture}</div>
-                            <div><strong>Surface:</strong> ${farmer.surface} hectares</div>
-                        </div>
-                        <div class="farmer-actions">
+    // Load farmers data for list page
+    function loadFarmersData() {
+        // Load table view
+        const tbody = document.getElementById('farmers-tbody');
+        tbody.innerHTML = '';
+        
+        if (farmers.length === 0) {
+            tbody.innerHTML = '<tr><td colspan="6" style="text-align: center; padding: 20px;">Aucun fermier enregistré</td></tr>';
+        } else {
+            farmers.forEach(farmer => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${farmer.nom} ${farmer.prenom}</td>
+                    <td>${farmer.telephone}</td>
+                    <td>${farmer.localisation}</td>
+                    <td>${farmer.wilaya || 'Non spécifiée'}</td>
+                    <td>${farmer.typeCulture}</td>
+                    <td>
+                        <div class="action-buttons">
                             <button class="btn-action btn-edit" onclick="editFarmerModal(${farmer.id})">
-                                <i class="fas fa-edit"></i> Modifier
+                                <i class="fas fa-edit"></i> 
                             </button>
                             <button class="btn-action btn-delete" onclick="confirmDeleteFarmer(${farmer.id})">
-                                <i class="fas fa-trash"></i> Supprimer
+                                <i class="fas fa-trash"></i> 
                             </button>
                             <button class="btn-action btn-view" onclick="viewFarmerModal(${farmer.id})">
-                                <i class="fas fa-eye"></i> Voir
+                                <i class="fas fa-eye"></i> 
                             </button>
                         </div>
-                    `;
-                    cardsContainer.appendChild(card);
-                });
-            }
-        }
-
-        // Filter farmers by region
-        function filterFarmersByRegion(region) {
-            const rows = document.querySelectorAll('#farmers-tbody tr');
-            const cards = document.querySelectorAll('.farmer-card');
-            
-            rows.forEach(row => {
-                const wilaya = row.cells[3].textContent;
-                let showRow = false;
-                
-                if (region === 'all') {
-                    showRow = true;
-                } else {
-                    const regionWilayas = wilayasByRegion[region];
-                    showRow = regionWilayas.includes(wilaya);
-                }
-                
-                row.style.display = showRow ? '' : 'none';
-            });
-            
-            cards.forEach(card => {
-                const wilaya = card.querySelector('.farmer-details div:nth-child(2)').textContent.replace('Wilaya: ', '');
-                let showCard = false;
-                
-                if (region === 'all') {
-                    showCard = true;
-                } else {
-                    const regionWilayas = wilayasByRegion[region];
-                    showCard = regionWilayas.includes(wilaya);
-                }
-                
-                card.style.display = showCard ? '' : 'none';
+                    </td>
+                `;
+                tbody.appendChild(row);
             });
         }
-
-        // Filter farmers based on search and filter criteria
-        function filterFarmers() {
-            const searchTerm = document.getElementById('search-farmer').value.toLowerCase();
-            const cultureFilter = document.getElementById('filter-culture').value;
-            const wilayaFilter = document.getElementById('filter-wilaya').value;
-            
-            const rows = document.querySelectorAll('#farmers-tbody tr');
-            const cards = document.querySelectorAll('.farmer-card');
-            
-            rows.forEach(row => {
-                const name = row.cells[0].textContent.toLowerCase();
-                const phone = row.cells[1].textContent.toLowerCase();
-                const location = row.cells[2].textContent.toLowerCase();
-                const wilaya = row.cells[3].textContent;
-                const culture = row.cells[4].textContent;
-                
-                const matchesSearch = name.includes(searchTerm) || phone.includes(searchTerm) || location.includes(searchTerm);
-                const matchesCulture = !cultureFilter || culture === cultureFilter;
-                const matchesWilaya = !wilayaFilter || wilaya === wilayaFilter;
-                
-                row.style.display = matchesSearch && matchesCulture && matchesWilaya ? '' : 'none';
-            });
-            
-            cards.forEach(card => {
-                const name = card.querySelector('.farmer-name').textContent.toLowerCase();
-                const phone = card.querySelector('.farmer-phone').textContent.toLowerCase();
-                const location = card.querySelector('.farmer-details div:nth-child(1)').textContent.replace('Localisation: ', '').toLowerCase();
-                const wilaya = card.querySelector('.farmer-details div:nth-child(2)').textContent.replace('Wilaya: ', '');
-                const culture = card.querySelector('.farmer-details div:nth-child(3)').textContent.replace('Type de culture: ', '');
-                
-                const matchesSearch = name.includes(searchTerm) || phone.includes(searchTerm) || location.includes(searchTerm);
-                const matchesCulture = !cultureFilter || culture === cultureFilter;
-                const matchesWilaya = !wilayaFilter || wilaya === wilayaFilter;
-                
-                card.style.display = matchesSearch && matchesCulture && matchesWilaya ? '' : 'none';
-            });
-        }
-
-        // Load farmers select for reports
-        function loadFarmersSelect() {
-            const select = document.getElementById('fermier-select');
-            const filterSelect = document.getElementById('filter-farmer-report');
-            
-            select.innerHTML = '<option value="">Choisir un fermier</option>';
-            filterSelect.innerHTML = '<option value="">Tous les fermiers</option>';
-            
+        
+        // Load cards view
+        const cardsContainer = document.getElementById('farmers-cards');
+        cardsContainer.innerHTML = '';
+        
+        if (farmers.length === 0) {
+            cardsContainer.innerHTML = '<p style="text-align: center; color: #666;">Aucun fermier enregistré</p>';
+        } else {
             farmers.forEach(farmer => {
-                const option = document.createElement('option');
-                option.value = farmer.id;
-                option.textContent = `${farmer.prenom} ${farmer.nom} - ${farmer.wilaya || 'Non spécifiée'}`;
-                select.appendChild(option);
-                
-                const filterOption = document.createElement('option');
-                filterOption.value = farmer.id;
-                filterOption.textContent = `${farmer.prenom} ${farmer.nom}`;
-                filterSelect.appendChild(filterOption);
+                const card = document.createElement('div');
+                card.className = 'farmer-card';
+                card.innerHTML = `
+                    <div class="farmer-header">
+                        <div class="farmer-name">${farmer.prenom} ${farmer.nom}</div>
+                    </div>
+                    <div class="farmer-phone">${farmer.telephone}</div>
+                    <div class="farmer-details">
+                        <div><strong>Localisation:</strong> ${farmer.localisation}</div>
+                        <div><strong>Wilaya:</strong> ${farmer.wilaya || 'Non spécifiée'}</div>
+                        <div><strong>Type de culture:</strong> ${farmer.typeCulture}</div>
+                        <div><strong>Surface:</strong> ${farmer.surface} hectares</div>
+                    </div>
+                    <div class="farmer-actions">
+                        <button class="btn-action btn-edit" onclick="editFarmerModal(${farmer.id})">
+                            <i class="fas fa-edit"></i> Modifier
+                        </button>
+                        <button class="btn-action btn-delete" onclick="confirmDeleteFarmer(${farmer.id})">
+                            <i class="fas fa-trash"></i> Supprimer
+                        </button>
+                        <button class="btn-action btn-view" onclick="viewFarmerModal(${farmer.id})">
+                            <i class="fas fa-eye"></i> Voir
+                        </button>
+                    </div>
+                `;
+                cardsContainer.appendChild(card);
             });
         }
+    }
 
-        // Add a new farmer
-        function addFarmer() {
-            const nom = document.getElementById('nom').value;
-            const prenom = document.getElementById('prenom').value;
-            const telephone = document.getElementById('telephone').value;
-            const wilaya = document.getElementById('wilaya').value;
-            const localisation = document.getElementById('localisation').value;
-            const surface = parseFloat(document.getElementById('surface').value);
-            const typeCulture = document.getElementById('type-culture').value;
+    // Filter farmers by region
+    function filterFarmersByRegion(region) {
+        const rows = document.querySelectorAll('#farmers-tbody tr');
+        const cards = document.querySelectorAll('.farmer-card');
+        
+        rows.forEach(row => {
+            const wilaya = row.cells[3].textContent;
+            let showRow = false;
             
-            if (!localisation) {
-                showToast('Veuillez sélectionner une localisation sur la carte', 'error');
+            if (region === 'all') {
+                showRow = true;
+            } else {
+                const regionWilayas = wilayasByRegion[region];
+                showRow = regionWilayas.includes(wilaya);
+            }
+            
+            row.style.display = showRow ? '' : 'none';
+        });
+        
+        cards.forEach(card => {
+            const wilaya = card.querySelector('.farmer-details div:nth-child(2)').textContent.replace('Wilaya: ', '');
+            let showCard = false;
+            
+            if (region === 'all') {
+                showCard = true;
+            } else {
+                const regionWilayas = wilayasByRegion[region];
+                showCard = regionWilayas.includes(wilaya);
+            }
+            
+            card.style.display = showCard ? '' : 'none';
+        });
+    }
+
+    // Filter farmers based on search and filter criteria
+    function filterFarmers() {
+        const searchTerm = document.getElementById('search-farmer').value.toLowerCase();
+        const cultureFilter = document.getElementById('filter-culture').value;
+        const wilayaFilter = document.getElementById('filter-wilaya').value;
+        
+        const rows = document.querySelectorAll('#farmers-tbody tr');
+        const cards = document.querySelectorAll('.farmer-card');
+        
+        rows.forEach(row => {
+            const name = row.cells[0].textContent.toLowerCase();
+            const phone = row.cells[1].textContent.toLowerCase();
+            const location = row.cells[2].textContent.toLowerCase();
+            const wilaya = row.cells[3].textContent;
+            const culture = row.cells[4].textContent;
+            
+            const matchesSearch = name.includes(searchTerm) || phone.includes(searchTerm) || location.includes(searchTerm);
+            const matchesCulture = !cultureFilter || culture === cultureFilter;
+            const matchesWilaya = !wilayaFilter || wilaya === wilayaFilter;
+            
+            row.style.display = matchesSearch && matchesCulture && matchesWilaya ? '' : 'none';
+        });
+        
+        cards.forEach(card => {
+            const name = card.querySelector('.farmer-name').textContent.toLowerCase();
+            const phone = card.querySelector('.farmer-phone').textContent.toLowerCase();
+            const location = card.querySelector('.farmer-details div:nth-child(1)').textContent.replace('Localisation: ', '').toLowerCase();
+            const wilaya = card.querySelector('.farmer-details div:nth-child(2)').textContent.replace('Wilaya: ', '');
+            const culture = card.querySelector('.farmer-details div:nth-child(3)').textContent.replace('Type de culture: ', '');
+            
+            const matchesSearch = name.includes(searchTerm) || phone.includes(searchTerm) || location.includes(searchTerm);
+            const matchesCulture = !cultureFilter || culture === cultureFilter;
+            const matchesWilaya = !wilayaFilter || wilaya === wilayaFilter;
+            
+            card.style.display = matchesSearch && matchesCulture && matchesWilaya ? '' : 'none';
+        });
+    }
+
+    // Load farmers select for reports
+    function loadFarmersSelect() {
+        const select = document.getElementById('fermier-select');
+        const filterSelect = document.getElementById('filter-farmer-report');
+        
+        select.innerHTML = '<option value="">Choisir un fermier</option>';
+        filterSelect.innerHTML = '<option value="">Tous les fermiers</option>';
+        
+        farmers.forEach(farmer => {
+            const option = document.createElement('option');
+            option.value = farmer.id;
+            option.textContent = `${farmer.prenom} ${farmer.nom} - ${farmer.wilaya || 'Non spécifiée'}`;
+            select.appendChild(option);
+            
+            const filterOption = document.createElement('option');
+            filterOption.value = farmer.id;
+            filterOption.textContent = `${farmer.prenom} ${farmer.nom}`;
+            filterSelect.appendChild(filterOption);
+        });
+    }
+
+    // Add a new farmer
+    function addFarmer() {
+        const nom = document.getElementById('nom').value;
+        const prenom = document.getElementById('prenom').value;
+        const telephone = document.getElementById('telephone').value;
+        const wilaya = document.getElementById('wilaya').value;
+        const localisation = document.getElementById('localisation').value;
+        const surface = parseFloat(document.getElementById('surface').value);
+        let typeCulture = document.getElementById('type-culture').value;
+        
+        // التحقق من النوع المخصص
+        if (typeCulture === 'Autres') {
+            const customCulture = document.getElementById('custom-culture').value;
+            if (!customCulture) {
+                showToast('Veuillez préciser le type de culture', 'error');
                 return;
             }
-            
-            const newFarmer = {
-                id: Date.now(),
+            typeCulture = customCulture;
+        }
+        
+        if (!localisation) {
+            showToast('Veuillez sélectionner une localisation sur la carte', 'error');
+            return;
+        }
+        
+        const newFarmer = {
+            id: Date.now(),
+            nom,
+            prenom,
+            telephone,
+            wilaya,
+            localisation,
+            surface,
+            typeCulture,
+            dateAdded: new Date().toISOString()
+        };
+        
+        farmers.push(newFarmer);
+        localStorage.setItem('farmers', JSON.stringify(farmers));
+        
+        showToast('Fermier ajouté avec succès!', 'success');
+        document.getElementById('add-farmer-form').reset();
+        
+        // Reset map
+        if (marker) {
+            map.removeLayer(marker);
+            marker = null;
+        }
+        
+        // إخفاء حقل النوع المخصص بعد الإرسال
+        document.getElementById('custom-culture').style.display = 'none';
+        
+        // Update UI
+        updateDashboard();
+        loadRecentActivities();
+        
+        // If on farmers list page, refresh it
+        if (document.getElementById('liste-fermiers').style.display !== 'none') {
+            loadFarmersData();
+        }
+    }
+
+    // Add ordonnance field
+    function addOrdonnanceField(containerId, ordonnance = null) {
+        const container = document.getElementById(containerId);
+        const ordonnanceCount = container.children.length + 1;
+        
+        const ordonnanceDiv = document.createElement('div');
+        ordonnanceDiv.className = 'additional-ordonnance';
+        ordonnanceDiv.innerHTML = `
+            <div class="ordonnance-header">
+                <span class="ordonnance-title">Ordonnance ${ordonnanceCount}</span>
+                <button type="button" class="remove-ordonnance">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="form-group">
+                <label for="ordonnance-title-${containerId}-${ordonnanceCount}">Titre de l'ordonnance</label>
+                <input type="text" id="ordonnance-title-${containerId}-${ordonnanceCount}" class="form-control" placeholder="Ex: Traitement phytosanitaire" value="${ordonnance ? ordonnance.title : ''}">
+            </div>
+            <div class="form-group">
+                <label for="ordonnance-content-${containerId}-${ordonnanceCount}">Contenu de l'ordonnance</label>
+                <textarea id="ordonnance-content-${containerId}-${ordonnanceCount}" class="form-control" rows="3" placeholder="Détails de l'ordonnance..." required>${ordonnance ? ordonnance.content : ''}</textarea>
+            </div>
+        `;
+        
+        container.appendChild(ordonnanceDiv);
+        
+        ordonnanceDiv.querySelector('.remove-ordonnance').addEventListener('click', function() {
+            container.removeChild(ordonnanceDiv);
+        });
+    }
+
+    // Edit farmer modal
+    function editFarmerModal(id) {
+        farmerToEdit = farmers.find(farmer => farmer.id === id);
+        
+        if (!farmerToEdit) return;
+        
+        document.getElementById('edit-farmer-id').value = farmerToEdit.id;
+        document.getElementById('edit-nom').value = farmerToEdit.nom;
+        document.getElementById('edit-prenom').value = farmerToEdit.prenom;
+        document.getElementById('edit-telephone').value = farmerToEdit.telephone;
+        document.getElementById('edit-wilaya').value = farmerToEdit.wilaya || '';
+        document.getElementById('edit-localisation').value = farmerToEdit.localisation;
+        document.getElementById('edit-surface').value = farmerToEdit.surface;
+        document.getElementById('edit-type-culture').value = farmerToEdit.typeCulture;
+        
+        document.getElementById('editFarmerModal').style.display = 'flex';
+    }
+
+    // Save farmer edit
+    function saveFarmerEdit() {
+        const id = parseInt(document.getElementById('edit-farmer-id').value);
+        const nom = document.getElementById('edit-nom').value;
+        const prenom = document.getElementById('edit-prenom').value;
+        const telephone = document.getElementById('edit-telephone').value;
+        const wilaya = document.getElementById('edit-wilaya').value;
+        const localisation = document.getElementById('edit-localisation').value;
+        const surface = parseFloat(document.getElementById('edit-surface').value);
+        const typeCulture = document.getElementById('edit-type-culture').value;
+        
+        const farmerIndex = farmers.findIndex(farmer => farmer.id === id);
+        
+        if (farmerIndex !== -1) {
+            farmers[farmerIndex] = {
+                ...farmers[farmerIndex],
                 nom,
                 prenom,
                 telephone,
                 wilaya,
                 localisation,
                 surface,
-                typeCulture,
-                dateAdded: new Date().toISOString()
+                typeCulture
             };
             
-            farmers.push(newFarmer);
             localStorage.setItem('farmers', JSON.stringify(farmers));
             
-            showToast('Fermier ajouté avec succès!', 'success');
-            document.getElementById('add-farmer-form').reset();
-            
-            // Reset map
-            if (marker) {
-                map.removeLayer(marker);
-                marker = null;
-            }
+            showToast('Fermier modifié avec succès!', 'success');
+            document.getElementById('editFarmerModal').style.display = 'none';
             
             // Update UI
-            updateDashboard();
-            loadRecentActivities();
-            
-            // If on farmers list page, refresh it
-            if (document.getElementById('liste-fermiers').style.display !== 'none') {
-                loadFarmersData();
-            }
-        }
-
-        // Edit farmer modal
-        function editFarmerModal(id) {
-            farmerToEdit = farmers.find(farmer => farmer.id === id);
-            
-            if (!farmerToEdit) return;
-            
-            document.getElementById('edit-farmer-id').value = farmerToEdit.id;
-            document.getElementById('edit-nom').value = farmerToEdit.nom;
-            document.getElementById('edit-prenom').value = farmerToEdit.prenom;
-            document.getElementById('edit-telephone').value = farmerToEdit.telephone;
-            document.getElementById('edit-wilaya').value = farmerToEdit.wilaya || '';
-            document.getElementById('edit-localisation').value = farmerToEdit.localisation;
-            document.getElementById('edit-surface').value = farmerToEdit.surface;
-            document.getElementById('edit-type-culture').value = farmerToEdit.typeCulture;
-            
-            document.getElementById('editFarmerModal').style.display = 'flex';
-        }
-
-        // Save farmer edit
-        function saveFarmerEdit() {
-            const id = parseInt(document.getElementById('edit-farmer-id').value);
-            const nom = document.getElementById('edit-nom').value;
-            const prenom = document.getElementById('edit-prenom').value;
-            const telephone = document.getElementById('edit-telephone').value;
-            const wilaya = document.getElementById('edit-wilaya').value;
-            const localisation = document.getElementById('edit-localisation').value;
-            const surface = parseFloat(document.getElementById('edit-surface').value);
-            const typeCulture = document.getElementById('edit-type-culture').value;
-            
-            const farmerIndex = farmers.findIndex(farmer => farmer.id === id);
-            
-            if (farmerIndex !== -1) {
-                farmers[farmerIndex] = {
-                    ...farmers[farmerIndex],
-                    nom,
-                    prenom,
-                    telephone,
-                    wilaya,
-                    localisation,
-                    surface,
-                    typeCulture
-                };
-                
-                localStorage.setItem('farmers', JSON.stringify(farmers));
-                
-                showToast('Fermier modifié avec succès!', 'success');
-                document.getElementById('editFarmerModal').style.display = 'none';
-                
-                // Update UI
-                loadFarmersData();
-            }
-        }
-
-        // View farmer modal
-        function viewFarmerModal(id) {
-            const farmer = farmers.find(f => f.id === id);
-            
-            if (!farmer) return;
-            
-            const details = document.getElementById('farmer-details');
-            details.innerHTML = `
-                <div style="margin-bottom: 15px;">
-                    <strong>Nom complet:</strong> ${farmer.prenom} ${farmer.nom}
-                </div>
-                <div style="margin-bottom: 15px;">
-                    <strong>Téléphone:</strong> ${farmer.telephone}
-                </div>
-                <div style="margin-bottom: 15px;">
-                    <strong>Wilaya:</strong> ${farmer.wilaya || 'Non spécifiée'}
-                </div>
-                <div style="margin-bottom: 15px;">
-                    <strong>Localisation:</strong> ${farmer.localisation}
-                </div>
-                <div style="margin-bottom: 15px;">
-                    <strong>Surface:</strong> ${farmer.surface} hectares
-                </div>
-                <div style="margin-bottom: 15px;">
-                    <strong>Type de culture:</strong> ${farmer.typeCulture}
-                </div>
-                <div style="margin-bottom: 15px;">
-                    <strong>Date d'ajout:</strong> ${new Date(farmer.dateAdded).toLocaleDateString('fr-FR')}
-                </div>
-            `;
-            
-            // Load reports for this farmer
-            const farmerReports = reports.filter(report => report.farmerId === id);
-            const reportsList = document.getElementById('farmer-reports-list');
-            
-            if (farmerReports.length > 0) {
-                reportsList.innerHTML = '';
-                farmerReports.forEach(report => {
-                    const reportElement = document.createElement('div');
-                    reportElement.className = 'card';
-                    reportElement.style.marginBottom = '10px';
-                    reportElement.innerHTML = `
-                        <div style="display: flex; justify-content: between; align-items: flex-start; margin-bottom: 10px;">
-                            <div>
-                                <h4 style="margin: 0; color: var(--primary-dark);">Rapport du ${new Date(report.date).toLocaleDateString('fr-FR')}</h4>
-                            </div>
-                            <button class="btn-action btn-edit" onclick="editReportModal(${report.id})">
-                                <i class="fas fa-edit"></i> Modifier
-                            </button>
-                        </div>
-                        <div style="margin-bottom: 10px;">
-                            <p><strong>Description:</strong> ${report.description}</p>
-                        </div>
-                        <div style="background-color: var(--light-gray); padding: 10px; border-radius: 6px;">
-                            <h5 style="margin: 0 0 5px; color: var(--primary-dark);">Ordonnance:</h5>
-                            <p style="margin: 0;">${report.ordonnance}</p>
-                        </div>
-                        ${report.photo ? `
-                            <div style="text-align: center; margin-top: 10px;">
-                                <img src="${report.photo}" alt="Photo du rapport" style="max-width: 100%; max-height: 200px; border-radius: 6px;">
-                            </div>
-                        ` : ''}
-                    `;
-                    reportsList.appendChild(reportElement);
-                });
-            } else {
-                reportsList.innerHTML = '<p style="text-align: center; color: #666;">Aucun rapport pour ce fermier</p>';
-            }
-            
-            document.getElementById('viewFarmerModal').style.display = 'flex';
-        }
-
-        // Confirm delete farmer
-        function confirmDeleteFarmer(id) {
-            farmerToDelete = id;
-            document.getElementById('deleteModal').style.display = 'flex';
-        }
-
-        // Delete farmer
-        function deleteFarmer(id) {
-            farmers = farmers.filter(farmer => farmer.id !== id);
-            localStorage.setItem('farmers', JSON.stringify(farmers));
-            
-            // Also delete reports for this farmer
-            reports = reports.filter(report => report.farmerId !== id);
-            localStorage.setItem('reports', JSON.stringify(reports));
-            
-            showToast('Fermier supprimé avec succès!', 'success');
-            
-            // Update UI
-            updateDashboard();
-            loadRecentActivities();
             loadFarmersData();
         }
+    }
 
-        // Edit report modal
-        function editReportModal(id) {
-            reportToEdit = reports.find(report => report.id === id);
-            
-            if (!reportToEdit) return;
-            
-            document.getElementById('edit-report-id').value = reportToEdit.id;
-            document.getElementById('edit-report-description').value = reportToEdit.description;
-            document.getElementById('edit-report-ordonnance').value = reportToEdit.ordonnance;
-            
-            document.getElementById('editReportModal').style.display = 'flex';
-        }
-
-        // Save report edit
-        function saveReportEdit() {
-            const id = parseInt(document.getElementById('edit-report-id').value);
-            const description = document.getElementById('edit-report-description').value;
-            const ordonnance = document.getElementById('edit-report-ordonnance').value;
-            
-            const reportIndex = reports.findIndex(report => report.id === id);
-            
-            if (reportIndex !== -1) {
-                reports[reportIndex] = {
-                    ...reports[reportIndex],
-                    description,
-                    ordonnance
-                };
-                
-                localStorage.setItem('reports', JSON.stringify(reports));
-                
-                showToast('Rapport modifié avec succès!', 'success');
-                document.getElementById('editReportModal').style.display = 'none';
-                
-                // Update UI
-                if (document.getElementById('viewFarmerModal').style.display === 'flex') {
-                    viewFarmerModal(reports[reportIndex].farmerId);
-                }
-                loadReportsPage();
-            }
-        }
-
-        // Send report
-        function sendReport() {
-            const farmerId = parseInt(document.getElementById('fermier-select').value);
-            const description = document.getElementById('description').value;
-            const ordonnance = document.getElementById('ordonnance').value;
-            const photoUpload = document.getElementById('photo-upload');
-            
-            if (!farmerId) {
-                showToast('Veuillez sélectionner un fermier', 'error');
-                return;
-            }
-            
-            let photoData = null;
-            if (photoUpload.files.length > 0) {
-                const file = photoUpload.files[0];
-                const reader = new FileReader();
-                reader.onload = function(e) {
-                    photoData = e.target.result;
-                    saveReport(farmerId, description, ordonnance, photoData);
-                };
-                reader.readAsDataURL(file);
-            } else {
-                saveReport(farmerId, description, ordonnance, null);
-            }
-        }
-
-        // Save report to localStorage
-        function saveReport(farmerId, description, ordonnance, photoData) {
-            const newReport = {
-                id: Date.now(),
-                farmerId,
-                description,
-                ordonnance,
-                photo: photoData,
-                date: new Date().toISOString()
-            };
-            
-            reports.push(newReport);
-            localStorage.setItem('reports', JSON.stringify(reports));
-            
-            showToast('Rapport envoyé avec succès!', 'success');
-            document.getElementById('send-report-form').reset();
-            document.getElementById('image-preview').style.display = 'none';
-            
-            // Update UI
-            updateDashboard();
-            loadRecentActivities();
-        }
-
-        // Load reports page
-        function loadReportsPage() {
-            const container = document.getElementById('reports-list');
-            container.innerHTML = '';
-            
-            if (reports.length === 0) {
-                container.innerHTML = '<p style="text-align: center; color: #666;">Aucun rapport envoyé</p>';
-                return;
-            }
-            
-            // Sort reports by date (newest first)
-            const sortedReports = [...reports].sort((a, b) => new Date(b.date) - new Date(a.date));
-            
-            sortedReports.forEach(report => {
-                const farmer = farmers.find(f => f.id === report.farmerId);
-                if (!farmer) return;
-                
+    // View farmer modal
+    function viewFarmerModal(id) {
+        const farmer = farmers.find(f => f.id === id);
+        
+        if (!farmer) return;
+        
+        const details = document.getElementById('farmer-details');
+        details.innerHTML = `
+            <div style="margin-bottom: 15px;">
+                <strong>Nom complet:</strong> ${farmer.prenom} ${farmer.nom}
+            </div>
+            <div style="margin-bottom: 15px;">
+                <strong>Téléphone:</strong> ${farmer.telephone}
+            </div>
+            <div style="margin-bottom: 15px;">
+                <strong>Wilaya:</strong> ${farmer.wilaya || 'Non spécifiée'}
+            </div>
+            <div style="margin-bottom: 15px;">
+                <strong>Localisation:</strong> ${farmer.localisation}
+            </div>
+            <div style="margin-bottom: 15px;">
+                <strong>Surface:</strong> ${farmer.surface} hectares
+            </div>
+            <div style="margin-bottom: 15px;">
+                <strong>Type de culture:</strong> ${farmer.typeCulture}
+            </div>
+            <div style="margin-bottom: 15px;">
+                <strong>Date d'ajout:</strong> ${new Date(farmer.dateAdded).toLocaleDateString('fr-FR')}
+            </div>
+        `;
+        
+        // Load reports for this farmer
+        const farmerReports = reports.filter(report => report.farmerId === id);
+        const reportsList = document.getElementById('farmer-reports-list');
+        
+        if (farmerReports.length > 0) {
+            reportsList.innerHTML = '';
+            farmerReports.forEach(report => {
                 const reportElement = document.createElement('div');
                 reportElement.className = 'card';
+                reportElement.style.marginBottom = '10px';
                 reportElement.innerHTML = `
                     <div style="display: flex; justify-content: between; align-items: flex-start; margin-bottom: 10px;">
                         <div>
-                            <h3 style="margin: 0; color: var(--primary-dark);">${farmer.prenom} ${farmer.nom}</h3>
-                            <p style="margin: 5px 0 0; color: #666; font-size: 0.9rem;">${new Date(report.date).toLocaleDateString('fr-FR')}</p>
+                            <h4 style="margin: 0; color: var(--primary-dark);">Rapport du ${new Date(report.date).toLocaleDateString('fr-FR')}</h4>
                         </div>
                         <button class="btn-action btn-edit" onclick="editReportModal(${report.id})">
                             <i class="fas fa-edit"></i> Modifier
@@ -2474,119 +3087,402 @@
                     <div style="margin-bottom: 10px;">
                         <p><strong>Description:</strong> ${report.description}</p>
                     </div>
-                    <div style="background-color: var(--light-gray); padding: 10px; border-radius: 6px; margin-bottom: 10px;">
-                        <h4 style="margin: 0 0 5px; color: var(--primary-dark);">Ordonnance:</h4>
+                    <div style="background-color: var(--light-gray); padding: 10px; border-radius: 6px;">
+                        <h5 style="margin: 0 0 5px; color: var(--primary-dark);">Ordonnance:</h5>
                         <p style="margin: 0;">${report.ordonnance}</p>
                     </div>
                     ${report.photo ? `
-                        <div style="text-align: center;">
+                        <div style="text-align: center; margin-top: 10px;">
                             <img src="${report.photo}" alt="Photo du rapport" style="max-width: 100%; max-height: 200px; border-radius: 6px;">
                         </div>
                     ` : ''}
                 `;
-                container.appendChild(reportElement);
+                reportsList.appendChild(reportElement);
+            });
+        } else {
+            reportsList.innerHTML = '<p style="text-align: center; color: #666;">Aucun rapport pour ce fermier</p>';
+        }
+        
+        document.getElementById('viewFarmerModal').style.display = 'flex';
+    }
+
+    // Confirm delete farmer
+    function confirmDeleteFarmer(id) {
+        farmerToDelete = id;
+        document.getElementById('deleteModal').style.display = 'flex';
+    }
+
+    // Delete farmer
+    function deleteFarmer(id) {
+        farmers = farmers.filter(farmer => farmer.id !== id);
+        localStorage.setItem('farmers', JSON.stringify(farmers));
+        
+        // Also delete reports for this farmer
+        reports = reports.filter(report => report.farmerId !== id);
+        localStorage.setItem('reports', JSON.stringify(reports));
+        
+        showToast('Fermier supprimé avec succès!', 'success');
+        
+        // Update UI
+        updateDashboard();
+        loadRecentActivities();
+        loadFarmersData();
+    }
+
+    // Edit report modal
+    function editReportModal(id) {
+        reportToEdit = reports.find(report => report.id === id);
+        
+        if (!reportToEdit) return;
+        
+        document.getElementById('edit-report-id').value = reportToEdit.id;
+        document.getElementById('edit-report-description').value = reportToEdit.description;
+        
+        // دعم كلا النموذجين
+        if (reportToEdit.ordonnances && reportToEdit.ordonnances.length > 0) {
+            document.getElementById('edit-report-ordonnance').value = 
+                reportToEdit.ordonnances[0].content;
+            
+            // إضافة الوصفات الإضافية
+            const container = document.getElementById('edit-additional-ordonnances');
+            container.innerHTML = '';
+            
+            reportToEdit.ordonnances.slice(1).forEach(ordonnance => {
+                addOrdonnanceField('edit-additional-ordonnances', ordonnance);
+            });
+        } else {
+            document.getElementById('edit-report-ordonnance').value = reportToEdit.ordonnance || '';
+            document.getElementById('edit-additional-ordonnances').innerHTML = '';
+        }
+        
+        document.getElementById('editReportModal').style.display = 'flex';
+    }
+
+    // Save report edit
+    function saveReportEdit() {
+        const id = parseInt(document.getElementById('edit-report-id').value);
+        const description = document.getElementById('edit-report-description').value;
+        const ordonnance = document.getElementById('edit-report-ordonnance').value;
+        
+        // جمع الوصفات الإضافية
+        const additionalOrdonnances = [];
+        const ordonnanceElements = document.querySelectorAll('#edit-additional-ordonnances .additional-ordonnance');
+        
+        ordonnanceElements.forEach(element => {
+            const titleInput = element.querySelector('input[type="text"]');
+            const contentInput = element.querySelector('textarea');
+            
+            if (titleInput && contentInput && contentInput.value.trim()) {
+                additionalOrdonnances.push({
+                    title: titleInput.value.trim() || 'Ordonnance',
+                    content: contentInput.value.trim()
+                });
+            }
+        });
+        
+        const reportIndex = reports.findIndex(report => report.id === id);
+        
+        if (reportIndex !== -1) {
+            const allOrdonnances = [];
+            
+            if (ordonnance.trim()) {
+                allOrdonnances.push({
+                    title: 'Ordonnance principale',
+                    content: ordonnance
+                });
+            }
+            
+            if (additionalOrdonnances.length > 0) {
+                allOrdonnances.push(...additionalOrdonnances);
+            }
+            
+            reports[reportIndex] = {
+                ...reports[reportIndex],
+                description,
+                ordonnance: allOrdonnances.length === 1 ? allOrdonnances[0].content : ordonnance,
+                ordonnances: allOrdonnances.length > 0 ? allOrdonnances : null
+            };
+            
+            localStorage.setItem('reports', JSON.stringify(reports));
+            
+            showToast('Rapport modifié avec succès!', 'success');
+            document.getElementById('editReportModal').style.display = 'none';
+            
+            // تحديث الواجهة
+            if (document.getElementById('viewFarmerModal').style.display === 'flex') {
+                viewFarmerModal(reports[reportIndex].farmerId);
+            }
+            loadReportsPage();
+        }
+    }
+
+    // Send report
+    function sendReport() {
+        const farmerId = parseInt(document.getElementById('fermier-select').value);
+        const description = document.getElementById('description').value;
+        const ordonnance = document.getElementById('ordonnance').value;
+        const photoUpload = document.getElementById('photo-upload');
+        
+        // جمع الوصفات الإضافية
+        const additionalOrdonnances = [];
+        const ordonnanceElements = document.querySelectorAll('#additional-ordonnances .additional-ordonnance');
+        
+        ordonnanceElements.forEach(element => {
+            const titleInput = element.querySelector('input[type="text"]');
+            const contentInput = element.querySelector('textarea');
+            
+            if (titleInput && contentInput && contentInput.value.trim()) {
+                additionalOrdonnances.push({
+                    title: titleInput.value.trim() || 'Ordonnance',
+                    content: contentInput.value.trim()
+                });
+            }
+        });
+        
+        if (!farmerId) {
+            showToast('Veuillez sélectionner un fermier', 'error');
+            return;
+        }
+        
+        let photoData = null;
+        if (photoUpload.files.length > 0) {
+            const file = photoUpload.files[0];
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                photoData = e.target.result;
+                saveReport(farmerId, description, ordonnance, additionalOrdonnances, photoData);
+            };
+            reader.readAsDataURL(file);
+        } else {
+            saveReport(farmerId, description, ordonnance, additionalOrdonnances, null);
+        }
+    }
+
+    // Save report to localStorage
+    function saveReport(farmerId, description, ordonnance, additionalOrdonnances, photoData) {
+        // دمج الوصفة الرئيسية مع الإضافية
+        const allOrdonnances = [];
+        
+        if (ordonnance.trim()) {
+            allOrdonnances.push({
+                title: 'Ordonnance principale',
+                content: ordonnance
             });
         }
+        
+        if (additionalOrdonnances && additionalOrdonnances.length > 0) {
+            allOrdonnances.push(...additionalOrdonnances);
+        }
+        
+        const newReport = {
+            id: Date.now(),
+            farmerId,
+            description,
+            // الحفاظ على التوافق مع التقارير القديمة
+            ordonnance: allOrdonnances.length === 1 ? allOrdonnances[0].content : ordonnance,
+            ordonnances: allOrdonnances.length > 0 ? allOrdonnances : null,
+            photo: photoData,
+            date: new Date().toISOString()
+        };
+        
+        reports.push(newReport);
+        localStorage.setItem('reports', JSON.stringify(reports));
+        
+        showToast('Rapport envoyé avec succès!', 'success');
+        document.getElementById('send-report-form').reset();
+        document.getElementById('image-preview').style.display = 'none';
+        document.getElementById('additional-ordonnances').innerHTML = '';
+        
+        // Update UI
+        updateDashboard();
+        loadRecentActivities();
+    }
 
-        // Filter reports
-        function filterReports() {
-            const searchTerm = document.getElementById('search-report').value.toLowerCase();
-            const farmerFilter = document.getElementById('filter-farmer-report').value;
-            const dateFilter = document.getElementById('filter-date-report').value;
+    // Load reports page
+    function loadReportsPage() {
+        const container = document.getElementById('reports-list');
+        container.innerHTML = '';
+        
+        if (reports.length === 0) {
+            container.innerHTML = '<p style="text-align: center; color: #666; padding: 40px;">Aucun rapport envoyé</p>';
+            return;
+        }
+        
+        // Sort reports by date (newest first)
+        const sortedReports = [...reports].sort((a, b) => new Date(b.date) - new Date(a.date));
+        
+        sortedReports.forEach(report => {
+            const farmer = farmers.find(f => f.id === report.farmerId);
+            if (!farmer) return;
             
-            const reportElements = document.querySelectorAll('#reports-list .card');
-            
-            reportElements.forEach(element => {
-                const farmerName = element.querySelector('h3').textContent.toLowerCase();
-                const description = element.querySelector('p').textContent.toLowerCase();
-                const dateText = element.querySelector('p:nth-child(2)').textContent;
-                const reportDate = new Date(dateText.split('/').reverse().join('-'));
+            const reportElement = document.createElement('div');
+            reportElement.className = 'report-card';
+            reportElement.setAttribute('data-farmer-id', report.farmerId);
+            reportElement.setAttribute('data-date', report.date);
+            reportElement.innerHTML = `
+                <div class="report-card-header">
+                    <div class="report-card-info">
+                        <div class="farmer-name">${farmer.prenom} ${farmer.nom}</div>
+                        <div class="report-date">${new Date(report.date).toLocaleDateString('fr-FR', { 
+                            day: 'numeric', 
+                            month: 'long', 
+                            year: 'numeric',
+                            hour: '2-digit',
+                            minute: '2-digit'
+                        })}</div>
+                    </div>
+                    <div class="report-actions">
+                        <button class="btn-action btn-edit" onclick="editReportModal(${report.id})" title="Modifier le rapport">
+                            <i class="fas fa-edit"></i>
+                        </button>
+                    </div>
+                </div>
                 
-                const matchesSearch = farmerName.includes(searchTerm) || description.includes(searchTerm);
-                const matchesFarmer = !farmerFilter || element.getAttribute('data-farmer-id') === farmerFilter;
-                
-                // Date filtering
-                let matchesDate = true;
-                if (dateFilter) {
-                    const now = new Date();
-                    const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+                <div class="report-card-content">
+                    <div class="report-section">
+                        <h4><i class="fas fa-file-alt"></i> Description</h4>
+                        <p>${report.description}</p>
+                    </div>
                     
-                    if (dateFilter === 'today') {
-                        matchesDate = reportDate.getTime() === today.getTime();
-                    } else if (dateFilter === 'week') {
-                        const oneWeekAgo = new Date(today);
-                        oneWeekAgo.setDate(oneWeekAgo.getDate() - 7);
-                        matchesDate = reportDate >= oneWeekAgo;
-                    } else if (dateFilter === 'month') {
-                        const oneMonthAgo = new Date(today);
-                        oneMonthAgo.setMonth(oneMonthAgo.getMonth() - 1);
-                        matchesDate = reportDate >= oneMonthAgo;
-                    }
-                }
+                    <div class="report-section">
+                        <h4><i class="fas fa-prescription"></i> Ordonnances</h4>
+                        <div class="ordonnances-list">
+                            ${report.ordonnances ? 
+                                report.ordonnances.map(ordonnance => `
+                                    <div class="ordonnance-card">
+                                        <div class="ordonnance-title">${ordonnance.title}</div>
+                                        <div class="ordonnance-content">${ordonnance.content}</div>
+                                    </div>
+                                `).join('') 
+                                : 
+                                (report.ordonnance ? `
+                                    <div class="ordonnance-card">
+                                        <div class="ordonnance-title">Ordonnance principale</div>
+                                        <div class="ordonnance-content">${report.ordonnance}</div>
+                                    </div>
+                                ` : '<p>Aucune ordonnance</p>')
+                            }
+                        </div>
+                    </div>
+                    
+                    ${report.photo ? `
+                    <div class="report-section">
+                        <h4><i class="fas fa-camera"></i> Photo</h4>
+                        <div class="report-photo-container">
+                            <img src="${report.photo}" alt="Photo du rapport" class="report-photo">
+                        </div>
+                    </div>
+                    ` : ''}
+                </div>
                 
-                element.style.display = matchesSearch && matchesFarmer && matchesDate ? '' : 'none';
-            });
-        }
-
-        // Update profile
-        function updateProfile() {
-            const nom = document.getElementById('profile-nom').value;
-            const prenom = document.getElementById('profile-prenom').value;
-            const email = document.getElementById('profile-email').value;
-            const telephone = document.getElementById('profile-telephone').value;
-            const wilaya = document.getElementById('profile-wilaya').value;
-            
-            // In a real app, you would save this to a backend
-            // For demo, we'll just show a success message
-            showToast('Profil mis à jour avec succès!', 'success');
-        }
-
-        // Update password
-        function updatePassword() {
-            const currentPassword = document.getElementById('current-password').value;
-            const newPassword = document.getElementById('new-password').value;
-            const confirmPassword = document.getElementById('confirm-password').value;
-            
-            if (!currentPassword || !newPassword || !confirmPassword) {
-                showToast('Veuillez remplir tous les champs', 'error');
-                return;
-            }
-            
-            if (newPassword !== confirmPassword) {
-                showToast('Les mots de passe ne correspondent pas', 'error');
-                return;
-            }
-            
-            // In a real app, you would verify the current password and update it
-            // For demo, we'll just show a success message
-            showToast('Mot de passe mis à jour avec succès!', 'success');
-            document.getElementById('security-form').reset();
-        }
-
-        // Show toast notification
-        function showToast(message, type = 'success') {
-            const container = document.getElementById('toast-container');
-            const toast = document.createElement('div');
-            toast.className = `toast ${type}`;
-            toast.innerHTML = `
-                <i class="fas fa-${type === 'success' ? 'check-circle' : 'exclamation-circle'}"></i>
-                <div class="toast-content">
-                    <h4>${type === 'success' ? 'Succès' : 'Erreur'}</h4>
-                    <p>${message}</p>
+                <div class="report-card-footer">
+                    <div class="report-id">Rapport #${report.id}</div>
                 </div>
             `;
+            container.appendChild(reportElement);
+        });
+    }
+
+    // Filter reports
+    function filterReports() {
+        const searchTerm = document.getElementById('search-report').value.toLowerCase();
+        const farmerFilter = document.getElementById('filter-farmer-report').value;
+        const dateFilter = document.getElementById('filter-date-report').value;
+        
+        const reportElements = document.querySelectorAll('#reports-list .report-card');
+        
+        reportElements.forEach(element => {
+            const farmerName = element.querySelector('.farmer-name').textContent.toLowerCase();
+            const description = element.querySelector('.report-section p').textContent.toLowerCase();
+            const reportDate = new Date(element.getAttribute('data-date'));
             
-            container.appendChild(toast);
+            const matchesSearch = farmerName.includes(searchTerm) || description.includes(searchTerm);
+            const matchesFarmer = !farmerFilter || element.getAttribute('data-farmer-id') === farmerFilter;
             
-            // Remove toast after 5 seconds
-            setTimeout(() => {
-                toast.style.animation = 'toastSlideIn 0.3s reverse';
-                setTimeout(() => {
-                    container.removeChild(toast);
-                }, 300);
-            }, 5000);
+            // Date filtering
+            let matchesDate = true;
+            if (dateFilter) {
+                const now = new Date();
+                const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+                
+                // تحويل تاريخ التقرير إلى تاريخ فقط (بدون وقت)
+                const reportDateOnly = new Date(reportDate.getFullYear(), reportDate.getMonth(), reportDate.getDate());
+                
+                if (dateFilter === 'today') {
+                    matchesDate = reportDateOnly.getTime() === today.getTime();
+                } else if (dateFilter === 'week') {
+                    const oneWeekAgo = new Date(today);
+                    oneWeekAgo.setDate(oneWeekAgo.getDate() - 7);
+                    matchesDate = reportDateOnly >= oneWeekAgo;
+                } else if (dateFilter === 'month') {
+                    const oneMonthAgo = new Date(today);
+                    oneMonthAgo.setMonth(oneMonthAgo.getMonth() - 1);
+                    matchesDate = reportDateOnly >= oneMonthAgo;
+                }
+            }
+            
+            element.style.display = matchesSearch && matchesFarmer && matchesDate ? '' : 'none';
+        });
+    }
+
+    // Update profile
+    function updateProfile() {
+        const nom = document.getElementById('profile-nom').value;
+        const prenom = document.getElementById('profile-prenom').value;
+        const email = document.getElementById('profile-email').value;
+        const telephone = document.getElementById('profile-telephone').value;
+        const wilaya = document.getElementById('profile-wilaya').value;
+        
+        // In a real app, you would save this to a backend
+        // For demo, we'll just show a success message
+        showToast('Profil mis à jour avec succès!', 'success');
+    }
+
+    // Update password
+    function updatePassword() {
+        const currentPassword = document.getElementById('current-password').value;
+        const newPassword = document.getElementById('new-password').value;
+        const confirmPassword = document.getElementById('confirm-password').value;
+        
+        if (!currentPassword || !newPassword || !confirmPassword) {
+            showToast('Veuillez remplir tous les champs', 'error');
+            return;
         }
-    </script>
+        
+        if (newPassword !== confirmPassword) {
+            showToast('Les mots de passe ne correspondent pas', 'error');
+            return;
+        }
+        
+        // In a real app, you would verify the current password and update it
+        // For demo, we'll just show a success message
+        showToast('Mot de passe mis à jour avec succès!', 'success');
+        document.getElementById('security-form').reset();
+    }
+
+    // Show toast notification
+    function showToast(message, type = 'success') {
+        const container = document.getElementById('toast-container');
+        const toast = document.createElement('div');
+        toast.className = `toast ${type}`;
+        toast.innerHTML = `
+            <i class="fas fa-${type === 'success' ? 'check-circle' : 'exclamation-circle'}"></i>
+            <div class="toast-content">
+                <h4>${type === 'success' ? 'Succès' : 'Erreur'}</h4>
+                <p>${message}</p>
+            </div>
+        `;
+        
+        container.appendChild(toast);
+        
+        // Remove toast after 5 seconds
+        setTimeout(() => {
+            toast.style.animation = 'toastSlideIn 0.3s reverse';
+            setTimeout(() => {
+                container.removeChild(toast);
+            }, 300);
+        }, 5000);
+    }
+</script>
 </body>
 </html>
-
